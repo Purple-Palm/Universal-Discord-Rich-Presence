@@ -1,5 +1,3 @@
-<a name="top-links" />
-
 [![Discord](https://img.shields.io/discord/1054578014593241179?style=flat&logo=discord&logoColor=ffffff&label=Discord&labelColor=0000ff&link=https%3A%2F%2Fdiscord.gg%2FdzqeXYDDmy)](https://discord.gg/dzqeXYDDmy) 
 
 ### Credits
@@ -24,5 +22,5 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 - [ ] Optimize the thing
 - [ ] Add more user friendly customization and interraction
 ## Other
-If you want us to add more things or change something, you can hop on [**discord**](#top-links), write an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or make a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) with a ready solution.
+If you want us to add more things or change something, you can hop on [discord](https://discord.gg/dzqeXYDDmy), write an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or make a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) with a ready solution.
 Also you can also go there to find help with our project.
