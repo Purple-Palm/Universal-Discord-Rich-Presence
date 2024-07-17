@@ -4,6 +4,7 @@
 
 ### Credits
 Have to mention that we have taken, edited, and implemented in our code project of https://github.com/colinhartigan/valorant-rpc 
+
 They got very nice VALORANT RPC that displays a lot of info about the game, like level, map, game mode, score, party and more.
 # Universal-Discord-Rich-Presence
 This project is making up to a collection of the Discord Rich Presences, but with autodetection of a focused window.
