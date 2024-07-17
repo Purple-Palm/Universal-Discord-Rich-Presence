@@ -3,10 +3,9 @@
 [![Discord](https://img.shields.io/discord/1054578014593241179?style=flat&logo=discord&logoColor=ffffff&label=Discord&labelColor=0000ff&link=https%3A%2F%2Fdiscord.gg%2FdzqeXYDDmy)](https://discord.gg/dzqeXYDDmy) 
 
 ### Credits
-Have to mention that we have taken, edited, and implemented in our code project of https://github.com/colinhartigan/valorant-rpc 
-
+Have to mention that we have taken, edited, and implemented in our code project of https://github.com/colinhartigan/valorant-rpc /n
 They got very nice VALORANT RPC that displays a lot of info about the game, like level, map, game mode, score, party and more.
-# Universal-Discord-Rich-Presence
+# Universal Discord Rich Presence
 This project is making up to a collection of the Discord Rich Presences, but with autodetection of a focused window.
 ## Requirements
 - Python >= 3.11
