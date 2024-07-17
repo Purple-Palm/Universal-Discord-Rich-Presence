@@ -20,10 +20,10 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 - Changes status as fast as you change focus on different apps
 - Room for adding more desired RPCs
 ## Plans
-- [] Finish up with the base collection
-- [] Get the thing to work stable and everywhere
-- [] Optimize the thing
-- [] Add more user friendly customization and interraction
+- [ ] Finish up with the base collection
+- [ ] Get the thing to work stable and everywhere
+- [ ] Optimize the thing
+- [ ] Add more user friendly customization and interraction
 ## Other
 If you want us to add more things or change something, you can hop on [**discord**](#top-links), write an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or make a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) with a ready solution.
 Also if you need help you can also go there to find help.
