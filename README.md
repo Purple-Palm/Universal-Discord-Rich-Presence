@@ -23,4 +23,4 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 - [ ] Add more user friendly customization and interraction
 ## Other
 If you want us to add more things or change something, you can hop on [discord](https://discord.gg/dzqeXYDDmy), write an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or make a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) with a ready solution.
-Also you can also go there to find help with our project.
+Also you can also go there to find help with our project. 
