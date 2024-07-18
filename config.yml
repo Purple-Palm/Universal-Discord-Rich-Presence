@@ -117,8 +117,29 @@ programs:
       state: Chatting in Telegram
       large_image: 1
 
+  AyuGram:
+    name: AyuGram Desktop
+    enable: true
+    executable: ayugram.exe
+    app_id: 
+    discord_rpc:
+      state: Chatting in Ayugram
+      large_image: 1
 
+  VLCplayer:
+    name: VLC Media Player
+    enale: true
+    executable: vlc.exe
+    app_id: 1262981573305700352
+    discord_rpc:
+      state: Playing media
+      large_image: 1
   
-  
-
-  
+  voicemeeter8x64:
+    name: voicemeeter8x64
+    enale: true
+    executable: voicemeeter8x64.exe
+    app_id: 1262944099531755551
+    discord_rpc:
+      state: Setting up some sound in voicemeeter
+      large_image: 1
