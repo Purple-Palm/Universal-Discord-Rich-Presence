@@ -1,1 +1,3 @@
 python run.py
+
+pause
