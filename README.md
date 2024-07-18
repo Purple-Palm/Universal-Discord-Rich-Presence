@@ -1,8 +1,5 @@
 [![Discord](https://img.shields.io/discord/1054578014593241179?style=flat&logo=discord&logoColor=ffffff&label=Discord&labelColor=0000ff&link=https%3A%2F%2Fdiscord.gg%2FdzqeXYDDmy)](https://discord.gg/dzqeXYDDmy) 
 
-### Credits
-Have to mention that we have taken, edited, and implemented in our code from the project of https://github.com/colinhartigan/valorant-rpc
-They got very nice VALORANT RPC that displays a lot of info about the game, like level, map, game mode, score, party and more.
 # Universal Discord Rich Presence
 This project is making up to a collection of the Discord Rich Presences, but with autodetection of a focused window.
 ## Requirements
@@ -24,3 +21,7 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 ## Other
 If you want us to add more things or change something, you can hop on [discord](https://discord.gg/dzqeXYDDmy), write an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or make a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) with a ready solution.
 Also you can also go there to find help with our project. 
+
+### Credits
+
+We have forked and adapted code from [Colin Hartigan's project](https://github.com/colinhartigan/valorant-rpc).
