@@ -7,8 +7,8 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 ## Setup
 - Have Python installed
 - Don't forget to install required libraries using `pip install -r "wherever\your\files\are\located\req.txt"`
-- Launch `run.bat`
-- Go to [discord](https://discord.gg/dzqeXYDDmy) and write what errors you got (or at what point it stopped working)
+- Launch one of `run.bat`'s
+- Go to our [discord sserver](https://discord.gg/dzqeXYDDmy) and write what errors you got (or at what point it stopped working)
 ## Features
 - Focused app autodetection
 - Changes status as fast as you change focus on different apps
@@ -16,11 +16,11 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 ## Plans
 - [ ] Finish up with the base collection
 - [ ] Get the thing to work stable and everywhere
-- [ ] Optimize the thing
+- [ ] Optimize the code
 - [ ] Add more user friendly customization and interraction
 ## Other
-If you want us to add more things or change something, you can hop on [discord](https://discord.gg/dzqeXYDDmy), write an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or make a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) with a ready solution.
-Also you can also go there to find help with our project. 
+If you want us to add more things or change something, you can hop on our [discord project](https://discord.gg/dzqeXYDDmy) and write an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or make a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) with a ready solution.
+Also you can go there to find help with our project. 
 
 ### Credits
 
