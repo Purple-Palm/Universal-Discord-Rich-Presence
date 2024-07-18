@@ -9,7 +9,7 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 - Python >= 3.11
 ## Setup
 - Have Python installed
-- Don't forget to install required libraries using `pip install -r "wherever\your\files\are\located\requirements.txt"`
+- Don't forget to install required libraries using `pip install -r "wherever\your\files\are\located\req.txt"`
 - Launch `run.bat`
 - Go to [discord](https://discord.gg/dzqeXYDDmy) and write what errors you got (or at what point it stopped working)
 ## Features
