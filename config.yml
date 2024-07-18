@@ -1,0 +1,124 @@
+# In case if you want to use only one application
+# You can specify it in default_app_id
+default_app_id: 
+
+# If set to true 
+# Only default_app_id will be used
+force_default_id: false
+
+# TEMPLATE TO ADD A PROGRAM 
+# FOR YOU TO COPY
+# template:
+   TheProgram: # Like a short program name (e. steam: , SPOTIFY: , VSCode: , EpicGamesLauncher)
+    name: The Program # Name that will be displayed in the console 
+    enable: true # Enable/Disable detection and display of this program
+    executable: Program.exe # Program Executable process that is detected when focused
+    app_id: 111111111111111111 # Discord Application Id to display Rich Presence
+    discord_rpc: 
+      details: Very good program # First line (May serve as about info)
+      state: Enjoying using Program # Second line (May serve as action in program)
+      large_image: large_image # id specified in dev portal for big image
+      large_text: Large Image # Description text that pop up on mouse hover
+      small_image: small_image # id specified in dev portal for corner image
+      small_text: Small Image # Description text that pop up on mouse hover
+
+
+
+
+# LIST OF PROGRAMS TO DISPLAY
+programs:
+  Discord: 
+    name: Discord 
+    enable: true
+    executable: Discord.exe 
+    app_id: 1262946659701096498 
+    discord_rpc: 
+      state: Chillin' in Discord 
+      large_image: 1
+    
+  EpicGamesLauncher:
+    name: Epic Games Launcher
+    enable: true
+    executable: EpicGamesLauncher.exe
+    app_id: 1263022294993731634
+    discord_rpc:
+      state: Choosing a game to play
+      large_image: 1
+
+  FileExplorer:
+    name: File Explorer
+    enable: true
+    executable: explorer.exe
+    app_id: 1262972467404865596
+    discord_rpc:
+      state: Browsing some files
+      large_image: 1
+
+  MicrosoftEdge:
+    name: Edge Browser
+    enable: true
+    executable: msedge.exe
+    app_id: 1262929038826016768
+    discord_rpc:
+      state: Browsing pages
+      large_image: 1
+
+  notepad:
+    name: Notepad
+    enable: true
+    executable: Notepad.exe
+    app_id: 1262987354524749906
+    discord_rpc:
+      state: Taking some notes
+      large_image: 1
+
+  NZXT_CAM:
+    name: NZXT CAM
+    enable: true
+    executable: NZXT CAM.exe
+    app_id: 1262983230945235065
+    discord_rpc:
+      state: Setting up NZXT devices
+      large_image: 1
+
+  RiotClient:
+    name: Riot Client
+    enable: true
+    executable: Riot Client.exe
+    app_id: 1262989311628808275
+    discord_rpc:
+      state: Choosing a game to play
+      large_image: 1
+
+  ShareX:
+    name: ShareX
+    enable: true
+    executable: ShareX.exe
+    app_id: 1262941941130068018
+    discord_rpc:
+      state: Screenshoting with ShareX
+      large_image: 1
+
+  steamwebhelper:
+    name: steamwebhelper
+    enable: true
+    executable: steamwebhelper.exe
+    app_id: 1262973733472305283
+    discord_rpc:
+      state: Choosing a game to play
+      large_image: 1
+
+  Telegram:
+    name: Telegram
+    enable: true
+    executable: Telegram.exe
+    app_id: 1262937085635985409
+    discord_rpc:
+      state: Chatting in Telegram
+      large_image: 1
+
+
+  
+  
+
+  

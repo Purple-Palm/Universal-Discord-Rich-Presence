@@ -32,7 +32,7 @@ def main():
 
         RPC.update(
             state="Chillin' in Discord",
-#            details="",
+            details="  ",
             large_image="1",
             start=start_time
         )
