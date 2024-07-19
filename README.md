@@ -8,7 +8,7 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 - Have Python installed
 - Don't forget to install required libraries using `pip install -r "wherever\your\files\are\located\req.txt"`
 - Launch one of `run.bat`'s
-- Go to our [discord sserver](https://discord.gg/dzqeXYDDmy) and write what errors you got (or at what point it stopped working)
+- Go to our [discord server](https://discord.gg/dzqeXYDDmy) and write what errors you got (or at what point it stopped working)
 ## Features
 - Focused app autodetection
 - Changes status as fast as you change focus on different apps
