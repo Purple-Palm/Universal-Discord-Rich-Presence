@@ -14,3 +14,4 @@ InquirerPy
 Pillow
 PyInstaller
 websockets
+pywin32
