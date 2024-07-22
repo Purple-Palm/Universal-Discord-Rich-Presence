@@ -1,6 +1,6 @@
 # In case if you want to use only one application
 # You can specify it in default_app_id
-default_app_id: 
+default_app_id: ""
 
 # If set to true 
 # Only default_app_id will be used
@@ -8,8 +8,8 @@ force_default_id: false
 
 # TEMPLATE TO ADD A PROGRAM 
 # FOR YOU TO COPY
-# template:
-   TheProgram: # Like a short program name (e. steam: , SPOTIFY: , VSCode: , EpicGamesLauncher)
+template:
+   TheProgram: # Like a short program name or ID (e. steam: , SPOTIFY: , VSCode: , EpicGamesLauncher)
     name: The Program # Name that will be displayed in the console 
     enable: true # Enable/Disable detection and display of this program
     executable: Program.exe # Program Executable process that is detected when focused
@@ -21,13 +21,12 @@ force_default_id: false
       large_text: Large Image # Description text that pop up on mouse hover
       small_image: small_image # id specified in dev portal for corner image
       small_text: Small Image # Description text that pop up on mouse hover
-
-
+    custom_rpc_executable_path: "your\\path\\to\\script\\TheProgramRPCScript.py" # custom_rpc_exe
 
 
 # LIST OF PROGRAMS TO DISPLAY
 programs:
-  Discord: 
+  Discord: #program_id
     name: Discord 
     enable: true
     executable: Discord.exe 
@@ -36,7 +35,7 @@ programs:
       state: Chillin' in Discord 
       large_image: 1
     
-  EpicGamesLauncher:
+  EpicGamesLauncher: 
     name: Epic Games Launcher
     enable: true
     executable: EpicGamesLauncher.exe
@@ -119,7 +118,7 @@ programs:
 
   AyuGram:
     name: AyuGram Desktop
-    enable: true
+    enable: false
     executable: ayugram.exe
     app_id: 
     discord_rpc:
@@ -128,7 +127,7 @@ programs:
 
   VLCplayer:
     name: VLC Media Player
-    enale: true
+    enable: true
     executable: vlc.exe
     app_id: 1262981573305700352
     discord_rpc:
@@ -137,9 +136,15 @@ programs:
   
   voicemeeter8x64:
     name: voicemeeter8x64
-    enale: true
+    enable: true
     executable: voicemeeter8x64.exe
     app_id: 1262944099531755551
     discord_rpc:
       state: Setting up some sound in voicemeeter
       large_image: 1
+
+  Colin's Valorant RPC:
+    name: Valorant
+    enable: true
+    executable: VALORANT-Win64-Shipping.exe
+    custom_rpc_executable_path: python presets/valorant/VALORANT-Win64-Shipping.py

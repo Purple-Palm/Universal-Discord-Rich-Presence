@@ -1,6 +1,7 @@
 import os
 import time
 import subprocess
+from InquirerPy.utils import color_print
 
 def open_discord():
     discord_path = os.path.join(os.getenv('LOCALAPPDATA'), 'Discord', 'Update.exe')
@@ -16,14 +17,34 @@ def is_discord_open():
 
 def main():
     if not is_discord_open():
-        print("Discord is not open. Opening Discord and playing sound.")
+        color_print(
+                [
+                    ('Skyblue', "Discord"),
+                    ('Red'," is not "),
+                    ('','open!'),
+                ]
+            )
         open_discord()
         time.sleep(10)  # Give Discord some time to open
         if not is_discord_open():
-            print("Failed to open Discord. Stopping script.")
+            color_print(
+                [
+                    ('Red', "Failed"),
+                    ('',"to open "),
+                    ('Skyblue', "Discord"),('','. '),
+                    ('Red', "Stopping script"),('','. ')
+                ]
+            )
             return
-    print("Discord is open. Starting main script.")
-    os.system("python main.py")
+    color_print(
+                [
+                    ('Blue', "Discord"),
+                    ('Green',' is open! '),
+                    ('Green', "Starting"),('',' RPC script.')
+                ]
+            )
+    os.system("python RPC.py")
 
 if __name__ == "__main__":
+    print("By Cactus and VGSS_")
     main()
