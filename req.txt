@@ -1,3 +1,4 @@
+pywin32
 urllib3
 iso8601
 Flask_Cors
@@ -13,4 +14,5 @@ InquirerPy
 Pillow
 PyInstaller
 websockets
+pyyaml
 pywin32

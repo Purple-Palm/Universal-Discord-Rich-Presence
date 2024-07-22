@@ -7,7 +7,7 @@ from pypresence import Presence
 import asyncio
 
 def main():
-    print("1 Minute delay before swapping RP for optimization.")
+    print("RPC connected, displaying custom RPC./n1 Minute delay before swapping RP for optimization.")
     os.system("python presets/valorant/main.py")
 
 
