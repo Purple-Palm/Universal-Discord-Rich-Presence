@@ -15,3 +15,4 @@ Pillow
 PyInstaller
 websockets
 pyyaml
+pywin32
