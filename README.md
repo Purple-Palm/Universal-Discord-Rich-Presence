@@ -6,8 +6,7 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 - Python >= 3.11
 ## Setup
 - Have Python installed
-- Don't forget to install required libraries using `pip install -r "wherever\your\files\are\located\req.txt"`
-- Launch one of `run.bat`'s
+- Simply run unpack.bat, this will set-up everything for you.
 - Go to our [discord server](https://discord.gg/dzqeXYDDmy) and let us know what errors you got (or at what point it stopped working)
 ## Features
 - Focused app autodetection
