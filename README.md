@@ -14,7 +14,7 @@ This project is making up to a collection of the Discord Rich Presences, but wit
 - Changes status as fast as you change focus on different apps
 - Room for adding more desired RPCs
 ## Plans
-- [ ] Finish up with the base collection
+- [x] Finish up with the base collection
 - [ ] Get the thing to work stable and everywhere
 - [ ] Optimize the code
 - [ ] Add more user friendly customization and interraction
