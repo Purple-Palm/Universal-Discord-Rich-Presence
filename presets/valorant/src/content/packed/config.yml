@@ -1,3 +1,6 @@
+#Work directory
+work_dir: ""
+
 # In case if you want to use only one application
 # You can specify it in default_app_id
 default_app_id: ""

@@ -1,6 +1,7 @@
 import os
 import time
 import subprocess
+import yaml
 from InquirerPy.utils import color_print
 
 def open_discord():
@@ -9,11 +10,16 @@ def open_discord():
 
 def is_discord_open():
     try:
-        # Check if Discord process is running
         output = subprocess.check_output(["tasklist"], creationflags=subprocess.CREATE_NO_WINDOW, text=True)
         return "Discord.exe" in output
     except subprocess.CalledProcessError:
         return False
+
+def read_config():
+    with open("setup.yml", 'r') as stream:
+        config = yaml.safe_load(stream)
+    print(f"Config work_dir: {config['work_dir']}")
+    return config['work_dir']
 
 def main():
     if not is_discord_open():
@@ -43,7 +49,11 @@ def main():
                     ('Green', "Starting"),('',' RPC script.')
                 ]
             )
-    os.system("python RPC.py")
+    work_dir = read_config()
+    bat_path = os.path.join(work_dir, "main.bat")
+    print(f"Running {bat_path}...")
+    subprocess.Popen([bat_path], shell=True)
+    print("main.bat started. Exiting run.py.")
 
 if __name__ == "__main__":
     print("By Cactus and VGSS_")

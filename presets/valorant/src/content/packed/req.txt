@@ -16,3 +16,8 @@ PyInstaller
 websockets
 pyyaml
 pywin32
+inquirerpy
+pyinstaller
+pyshortcuts
+winshell
+pyshortcuts
