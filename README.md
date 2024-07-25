@@ -1,26 +1,35 @@
 [![Discord](https://img.shields.io/discord/1054578014593241179?style=flat&logo=discord&logoColor=ffffff&label=Discord&labelColor=0000ff&link=https%3A%2F%2Fdiscord.gg%2FdzqeXYDDmy)](https://discord.gg/dzqeXYDDmy) 
 
 # Universal Discord Rich Presence
-This project is making up to a collection of the Discord Rich Presences, but with autodetection of a focused window.
+
+Welcome to Universal Discord Rich Presence! This project brings together a collection of Discord Rich Presences with the added convenience of autodetecting the focused window.
+
 ## Requirements
 - Python >= 3.11
+
 ## Setup
-- Have Python installed
-- Simply run unpack.bat, this will set-up everything for you.
-- Go to our [discord server](https://discord.gg/dzqeXYDDmy) and let us know what errors you got (or at what point it stopped working)
+1. Ensure Python is installed.
+2. Run `unpack.bat` to set up everything effortlessly.
+3. If you encounter any issues or have questions, join our [Discord server](https://discord.gg/dzqeXYDDmy) and let us know where you need assistance.
+
 ## Features
-- Focused app autodetection
-- Changes status as fast as you change focus on different apps
-- Room for adding more desired RPCs
+- **Focused App Autodetection:** Automatically detects the focused application.
+- **Instant Status Updates:** Changes your status as quickly as you switch between apps.
+- **Expandable RPC Collection:** Easily add more Rich Presence configurations as needed.
+
 ## Plans
-- [x] Finish up with the base collection
-- [ ] Get the thing to work stable and everywhere
-- [ ] Optimize the code
-- [ ] Add more user friendly customization and interraction
-## Other
-If you want us to add more things or change something, you can hop on our [discord project](https://discord.gg/dzqeXYDDmy) and write an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or make a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) with a ready solution.
-Also you can go there to find help with our project. 
+- [x] Complete the base collection
+- [ ] Ensure stability across all platforms
+- [ ] Optimize the code for better performance
+- [ ] Introduce more user-friendly customization and interaction options
 
-### Credits
+## Contributions and Support
+If you'd like to suggest new features or improvements, feel free to:
+- Join our [Discord server](https://discord.gg/dzqeXYDDmy) and share your ideas.
+- Submit an [**issue**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/issues) or a [**pull request**](https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/pulls) on GitHub.
 
-We have forked and adapted code from [Colin Hartigan's project](https://github.com/colinhartigan/valorant-rpc).
+Your contributions and feedback are highly valued!
+
+## Credits
+This project includes code forked and adapted from [Colin Hartigan's project](https://github.com/colinhartigan/valorant-rpc). We extend our gratitude for their amazing work.
+
