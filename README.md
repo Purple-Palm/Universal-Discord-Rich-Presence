@@ -22,6 +22,8 @@ Welcome to Universal Discord Rich Presence! This project brings together a colle
 - [ ] Ensure stability across all platforms
 - [ ] Optimize the code for better performance
 - [ ] Introduce more user-friendly customization and interaction options
+- [ ] Add full integration in dicord
+- [ ] Make auto-updater
 
 ## Contributions and Support
 If you'd like to suggest new features or improvements, feel free to:
