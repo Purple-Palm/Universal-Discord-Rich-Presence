@@ -182,6 +182,15 @@ programs:
       state: Setting up the PC
       large_image: 2 #Do not change
 
+  Taskmgr:
+    name: Taskmgr
+    enable: true
+    executable: Taskmgr.exe
+    app_id: 1267244049451192442
+    discord_rpc:
+      state: Monitoring processes
+      large_image: 1
+
 
   Colin's Valorant RPC:
     name: Valorant
