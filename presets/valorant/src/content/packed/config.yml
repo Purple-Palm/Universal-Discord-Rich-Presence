@@ -173,6 +173,15 @@ programs:
       state: Debugging in Windows Terminal
       large_image: 1
 
+  SystemSettings:
+    name: SystemSettings
+    enable: true
+    executable: SystemSettings.exe
+    app_id: 1267241964353355886
+    discord_rpc:
+      state: Debugging in Windows Terminal
+      large_image: 2 #Do not change
+
 
   Colin's Valorant RPC:
     name: Valorant
