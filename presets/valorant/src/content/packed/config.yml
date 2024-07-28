@@ -155,6 +155,24 @@ programs:
       state: Editing video in Clipchamp
       large_image: 1
 
+  cmd:
+    name: cmd
+    enable: true
+    executable: cmd.exe
+    app_id: 1267022953489498193
+    discord_rpc:
+      state: Debugging in CMD
+      large_image: 1
+
+  WindowsTerminal:
+    name: WindowsTerminal
+    enable: true
+    executable: WindowsTerminal.exe
+    app_id: 1267022953489498193
+    discord_rpc:
+      state: Debugging in Windows Terminal
+      large_image: 1
+
 
   Colin's Valorant RPC:
     name: Valorant
