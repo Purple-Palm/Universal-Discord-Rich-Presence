@@ -146,6 +146,16 @@ programs:
       state: Setting up some sound in voicemeeter
       large_image: 1
 
+  Clipchamp:
+    name: Clipchamp
+    enable: true
+    executable: Clipchamp.exe
+    app_id: 1266991923625984064
+    discord_rpc:
+      state: Editing video in Clipchamp
+      large_image: 1
+
+
   Colin's Valorant RPC:
     name: Valorant
     enable: true
