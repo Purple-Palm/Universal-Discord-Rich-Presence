@@ -179,7 +179,7 @@ programs:
     executable: SystemSettings.exe
     app_id: 1267241964353355886
     discord_rpc:
-      state: Debugging in Windows Terminal
+      state: Setting up the PC
       large_image: 2 #Do not change
 
 
