@@ -191,6 +191,15 @@ programs:
       state: Monitoring processes
       large_image: 1
 
+  Photos:
+    name: Photos
+    enable: true
+    executable: Photos.exe
+    app_id: 1267390426239864876
+    discord_rpc:
+      state: Looking on sosme photos
+      large_image: 1
+
 
   Colin's Valorant RPC:
     name: Valorant
