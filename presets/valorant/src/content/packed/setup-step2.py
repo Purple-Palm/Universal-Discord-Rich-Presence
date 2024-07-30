@@ -70,8 +70,8 @@ def create_new_shortcuts():
     working_directory = os.path.dirname(target_path)
     
     # Copy setup.yml to the target locations
-    shutil.copy(config_path, start_menu_path)
-    shutil.copy(config_path, desktop_path)
+#    shutil.copy(config_path, start_menu_path)    ###Not including startup folder
+#    shutil.copy(config_path, desktop_path)    ###Not including startup folder
 #    shutil.copy(config_path, startup_path)    ###Not including startup folder
 
     # Create new shortcuts with "Start In" property
