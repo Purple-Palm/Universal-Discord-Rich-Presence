@@ -23,7 +23,7 @@ Welcome to Universal Discord Rich Presence! This project brings together a colle
 - [X] Introduce more user-friendly customization and interaction options
 - [X] Add full integration in discord
 - [X] Make auto-updater
-- [ ] Mix minor bugs
+- [ ] Fix minor bugs
 
 ## Contributions and Support
 If you'd like to suggest new features or improvements, feel free to:
