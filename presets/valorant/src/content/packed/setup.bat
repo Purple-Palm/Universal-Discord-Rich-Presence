@@ -1,6 +1,9 @@
 @echo off
 del unpack.bat
-echo Setting thing up...
+echo Setting things up...
+
+echo Version: 1.0 > version.yml
+
 :: Check for Python installation
 python --version >nul 2>&1
 if %errorlevel% neq 0 (
@@ -23,5 +26,22 @@ setlocal enabledelayedexpansion
 set "escaped_cd=%cd:\=\\%"
 echo work_dir: "!escaped_cd!" > setup.yml
 
+:: Create origcut folder
+set "origcut_path=%cd%\origcut"
+if not exist "%origcut_path%" (
+    mkdir "%origcut_path%"
+)
+
+:: Find and copy the original Discord shortcut to origcut
+set "user_profile=%USERPROFILE%"
+set "start_menu_path=%user_profile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc"
+set "discord_shortcut_name=Discord.lnk"
+
+if exist "%start_menu_path%\%discord_shortcut_name%" (
+    copy "%start_menu_path%\%discord_shortcut_name%" "%origcut_path%\%discord_shortcut_name%" /Y
+)
+
 :: Run the second setup script
 python setup-step2.py
+
+endlocal

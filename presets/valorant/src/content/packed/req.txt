@@ -15,9 +15,6 @@ Pillow
 PyInstaller
 websockets
 pyyaml
-pywin32
-inquirerpy
-pyinstaller
 pyshortcuts
-winshell
-pyshortcuts
+winshell 
+win10toast

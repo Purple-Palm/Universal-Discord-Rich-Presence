@@ -3,6 +3,8 @@ import shutil
 import subprocess
 from distutils.dir_util import copy_tree
 import win32com.client
+import win10toast
+from win10toast import ToastNotifier
 
 def compile_to_exe():
     # Path to the script to compile and the icon
@@ -26,6 +28,7 @@ def delete_original_shortcuts():
     user_profile = os.environ['USERPROFILE']
     start_menu_path = os.path.join(user_profile, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Discord Inc')
     desktop_path = os.path.join(user_profile, 'Desktop')
+    startup_path = os.path.join(user_profile, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
     
     discord_shortcut_name = 'Discord.lnk'
     
@@ -36,6 +39,11 @@ def delete_original_shortcuts():
     
     try:
         os.remove(os.path.join(desktop_path, discord_shortcut_name))
+    except FileNotFoundError:
+        pass
+    
+    try:
+        os.remove(os.path.join(startup_path, discord_shortcut_name))
     except FileNotFoundError:
         pass
 
@@ -52,6 +60,7 @@ def create_new_shortcuts():
     user_profile = os.environ['USERPROFILE']
     start_menu_path = os.path.join(user_profile, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Discord Inc')
     desktop_path = os.path.join(user_profile, 'Desktop')
+    startup_path = os.path.join(user_profile, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
     
     if not os.path.exists(start_menu_path):
         os.makedirs(start_menu_path)
@@ -63,6 +72,7 @@ def create_new_shortcuts():
     # Copy setup.yml to the target locations
     shutil.copy(config_path, start_menu_path)
     shutil.copy(config_path, desktop_path)
+#    shutil.copy(config_path, startup_path)    ###Not including startup folder
 
     # Create new shortcuts with "Start In" property
     create_shortcut(
@@ -80,8 +90,21 @@ def create_new_shortcuts():
         icon=target_path,
         working_directory=working_directory
     )
+    
+    create_shortcut(
+        target=target_path,
+        shortcut_path=os.path.join(startup_path, 'Discord.lnk'),
+        description='Custom Discord Shortcut',
+        icon=target_path,
+        working_directory=working_directory
+    )
+
+def send_notification():
+    toaster = ToastNotifier()
+    toaster.show_toast("🎉 Success!", "Everything is set up correctly. You can now start using the modified Discord. 🚀", duration=10)
 
 if __name__ == "__main__":
     compile_to_exe()
     delete_original_shortcuts()
     create_new_shortcuts()
+    send_notification()

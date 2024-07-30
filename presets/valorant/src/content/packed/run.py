@@ -24,37 +24,37 @@ def read_config():
 def main():
     if not is_discord_open():
         color_print(
-                [
-                    ('Skyblue', "Discord"),
-                    ('Red'," is not "),
-                    ('','open!'),
-                ]
-            )
+            [
+                ('Skyblue', "Discord"),
+                ('Red', " is not "),
+                ('', 'open!'),
+            ]
+        )
         open_discord()
         time.sleep(10)  # Give Discord some time to open
         if not is_discord_open():
             color_print(
                 [
                     ('Red', "Failed"),
-                    ('',"to open "),
-                    ('Skyblue', "Discord"),('','. '),
-                    ('Red', "Stopping script"),('','. ')
+                    ('', "to open "),
+                    ('Skyblue', "Discord"), ('', '. '),
+                    ('Red', "Stopping script"), ('', '. ')
                 ]
             )
             return
     color_print(
-                [
-                    ('Blue', "Discord"),
-                    ('Green',' is open! '),
-                    ('Green', "Starting"),('',' RPC script.')
-                ]
-            )
+        [
+            ('Blue', "Discord"),
+            ('Green', ' is open! '),
+            ('Green', "Starting"), ('', ' RPC script.')
+        ]
+    )
     work_dir = read_config()
     bat_path = os.path.join(work_dir, "main.bat")
     print(f"Running {bat_path}...")
     subprocess.Popen([bat_path], shell=True)
-    print("main.bat started. Exiting run.py.")
-
+    print("Updater started. Exiting run.py.")
+    
 if __name__ == "__main__":
     print("By Cactus and VGSS_")
     main()
