@@ -101,10 +101,15 @@ def create_new_shortcuts():
 
 def send_notification():
     toaster = ToastNotifier()
-    toaster.show_toast("🎉 Success!", "Everything is set up correctly. You can now start using the modified Discord. 🚀", duration=10)
+    toaster.show_toast("🎉 Success!", "Everything is set up correctly. Starting up modified Discord. 🚀", duration=10)
+
+def start_discord():
+    bat_path = os.path.join("main.bat")
+    subprocess.Popen([bat_path], shell=True)
 
 if __name__ == "__main__":
     compile_to_exe()
     delete_original_shortcuts()
     create_new_shortcuts()
     send_notification()
+    start_discord()

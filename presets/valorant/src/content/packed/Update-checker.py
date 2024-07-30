@@ -11,7 +11,6 @@ working_dir = os.path.dirname(os.path.realpath(__file__))
 version_file_path = os.path.join(working_dir, 'version.yml')
 desktop_path = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 bat_file_path = os.path.join(working_dir, 'REINSTALL-UPDATE.bat')
-shortcut_path = os.path.join(desktop_path, 'REINSTALL-UPDATE - Shortcut.url')
 
 # Load the local version
 with open(version_file_path, 'r') as version_file:
@@ -47,12 +46,10 @@ if local_version != github_version:
     print("Versions do not match. Update found. 🔄")
 
     # Send notification for update
-    toaster.show_toast("🔄 Update Found", "An update for the RPC is available. Check your desktop for the updater.", duration=10)
+    toaster.show_toast("🔄 Update Found", "An update for the RPC is available. Updating...", duration=10)
 
-    # Create a shortcut to the batch file on the desktop
-    shortcut_content = "[InternetShortcut]\nURL=file:///" + bat_file_path.replace('\\', '/')
-    with open(shortcut_path, 'w') as shortcut_file:
-        shortcut_file.write(shortcut_content)
+    # Run the batch file directly
+    subprocess.Popen(bat_file_path, creationflags=subprocess.CREATE_NO_WINDOW)
 
     # Terminate the script
     exit()
