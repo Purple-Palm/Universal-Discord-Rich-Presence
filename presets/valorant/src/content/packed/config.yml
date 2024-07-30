@@ -200,6 +200,24 @@ programs:
       state: Looking on sosme photos
       large_image: 1
 
+  WsaClient:
+    name: WsaClient
+    enable: true
+    executable: WsaClient.exe
+    app_id: 1267985784644829266
+    discord_rpc:
+      state: Running in android emulation
+      large_image: 1
+
+  GitHubDesktop:
+    name: GitHubDesktop
+    enable: true
+    executable: GitHubDesktop.exe
+    app_id: 1267987396536827905
+    discord_rpc:
+      state: Choosing project to work on
+      large_image: 1
+
 
   Colin's Valorant RPC:
     name: Valorant

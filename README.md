@@ -38,4 +38,4 @@ This project includes code forked and adapted from [Colin Hartigan's project](ht
 
 
 ### Version
-Version: 3.3
+Version: 3.5
