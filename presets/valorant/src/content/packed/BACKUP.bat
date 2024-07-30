@@ -25,5 +25,5 @@ if exist "%original_startup_shortcut%" (
 )
 
 echo Shortcuts have been restored to their original versions.
+call setup.bat
 endlocal
-pause

@@ -22,7 +22,7 @@ ping 127.0.0.1 -n 2 > nul
 ::    echo Found folder "origcut", attempting to delete...
 ::    rmdir /s /q "origcut" && echo Deleted folder "origcut" || echo Failed to delete folder "origcut"
 ::)
-ping 127.0.0.1 -n 2 > nul
+::ping 127.0.0.1 -n 2 > nul
 
 if exist "presets" (
     echo Found folder "presets", attempting to delete...
@@ -42,7 +42,6 @@ if exist "venv" (
 )
 ping 127.0.0.1 -n 2 > nul
 
-:: Deleting files with 1-second delay
 if exist "BACKUP.bat" (
     echo Found file "BACKUP.bat", attempting to delete...
     del /f /q "BACKUP.bat" && echo Deleted file "BACKUP.bat" || echo Failed to delete file "BACKUP.bat"
@@ -115,6 +114,25 @@ if exist "setup.yml" (
 )
 ping 127.0.0.1 -n 2 > nul
 
+if exist "version.yml" (
+    echo Found file "setup.yml", attempting to delete...
+    del /f /q "version.yml" && echo Deleted file "version.yml" || echo Failed to delete file "version.yml"
+)
+ping 127.0.0.1 -n 2 > nul
+
+if exist "main-start.bat" (
+    echo Found file "main-start.bat", attempting to delete...
+    del /f /q "main-start.bat" && echo Deleted file "main-start.bat" || echo Failed to delete file "main-start.bat"
+)
+ping 127.0.0.1 -n 2 > nul
+
+if exist "Update-checker.py" (
+    echo Found file "Update-checker.py", attempting to delete...
+    del /f /q "Update-checker.py" && echo Deleted file "Update-checker.py" || echo Failed to delete file "Update-checker.py"
+)
+ping 127.0.0.1 -n 2 > nul
+
+
 :: Check and remove shortcut
 set "desktop=%USERPROFILE%\Desktop"
 set "shortcut=REINSTALL-UPDATE - Shortcut.url"
@@ -139,7 +157,7 @@ cd ..
 rmdir /s /q Universal-Discord-Rich-Presence
 
 echo Running unpack.bat...
-call unpack.bat
+call BACKUP.bat
 
 echo Update/Reinstall process completed.
 pause
