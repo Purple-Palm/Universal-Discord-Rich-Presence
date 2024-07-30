@@ -37,3 +37,4 @@ This project includes code forked and adapted from [Colin Hartigan's project](ht
 
 
 
+Version: "2.0"
