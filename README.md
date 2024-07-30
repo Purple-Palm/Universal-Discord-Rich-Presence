@@ -36,5 +36,4 @@ Your contributions and feedback are highly valued!
 This project includes code forked and adapted from [Colin Hartigan's project](https://github.com/colinhartigan/valorant-rpc). We extend our gratitude for their amazing work.
 
 
-### Version
 Version: 2.0
