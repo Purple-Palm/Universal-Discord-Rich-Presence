@@ -18,12 +18,11 @@ Welcome to Universal Discord Rich Presence! This project brings together a colle
 - **Expandable RPC Collection:** Easily add more Rich Presence configurations as needed.
 
 ## Plans
-- [x] Complete the base collection
-- [ ] Ensure stability across all platforms
-- [ ] Optimize the code for better performance
-- [ ] Introduce more user-friendly customization and interaction options
-- [ ] Add full integration in dicord
-- [ ] Make auto-updater
+- [x] Complete the base collection 
+- [X] Optimize the code for better performance
+- [X] Introduce more user-friendly customization and interaction options
+- [X] Add full integration in discord
+- [X] Make auto-updater
 
 ## Contributions and Support
 If you'd like to suggest new features or improvements, feel free to:
@@ -34,6 +33,7 @@ Your contributions and feedback are highly valued!
 
 ## Credits
 This project includes code forked and adapted from [Colin Hartigan's project](https://github.com/colinhartigan/valorant-rpc). We extend our gratitude for their amazing work.
-
+.
+.
 ### Version
 Version: 3.2
