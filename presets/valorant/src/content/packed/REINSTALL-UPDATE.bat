@@ -18,10 +18,10 @@ if exist "build" (
 )
 ping 127.0.0.1 -n 2 > nul
 
-if exist "origcut" (
-    echo Found folder "origcut", attempting to delete...
-    rmdir /s /q "origcut" && echo Deleted folder "origcut" || echo Failed to delete folder "origcut"
-)
+::if exist "origcut" (
+::    echo Found folder "origcut", attempting to delete...
+::    rmdir /s /q "origcut" && echo Deleted folder "origcut" || echo Failed to delete folder "origcut"
+::)
 ping 127.0.0.1 -n 2 > nul
 
 if exist "presets" (
