@@ -4,6 +4,12 @@ setlocal
 echo Current directory: %cd%
 echo Starting cleanup process...
 
+:: Terminate all Python processes
+echo Terminating all Python processes...
+taskkill /F /IM python.exe /T
+taskkill /F /IM pythonw.exe /T
+taskkill /F /IM python3.11.exe /T
+
 ping 127.0.0.1 -n 2 > nul
 
 if exist "dist" (
@@ -17,12 +23,6 @@ if exist "build" (
     rmdir /s /q "build" && echo Deleted folder "build" || echo Failed to delete folder "build"
 )
 ping 127.0.0.1 -n 2 > nul
-
-::if exist "origcut" (
-::    echo Found folder "origcut", attempting to delete...
-::    rmdir /s /q "origcut" && echo Deleted folder "origcut" || echo Failed to delete folder "origcut"
-::)
-::ping 127.0.0.1 -n 2 > nul
 
 if exist "presets" (
     echo Found folder "presets", attempting to delete...
@@ -131,7 +131,6 @@ if exist "Update-checker.py" (
     del /f /q "Update-checker.py" && echo Deleted file "Update-checker.py" || echo Failed to delete file "Update-checker.py"
 )
 ping 127.0.0.1 -n 2 > nul
-
 
 :: Check and remove shortcut
 set "desktop=%USERPROFILE%\Desktop"
