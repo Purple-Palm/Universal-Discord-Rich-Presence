@@ -46,7 +46,7 @@ if local_version != github_version:
     print("Versions do not match. Update found. 🔄")
 
     # Send notification for update
-    toaster.show_toast("🔄 Update Found", "An update for the RPC is available. Updating...", duration=10)
+    toaster.show_toast(f"🔄 {github_version} Update Found", f"An update for the RPC is available. You are on V{local_version}. Updating...", icon_path="icons/custom-logo2.ico", duration=10)
 
     # Run the batch file directly
     subprocess.Popen(bat_file_path, creationflags=subprocess.CREATE_NO_WINDOW)
