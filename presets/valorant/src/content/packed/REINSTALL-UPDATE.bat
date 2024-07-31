@@ -157,7 +157,7 @@ cd ..
 rmdir /s /q Universal-Discord-Rich-Presence
 
 echo Running unpack.bat...
-call BACKUP.bat
+call unpack.bat
 
 echo Update/Reinstall process completed.
 pause
