@@ -9,7 +9,7 @@ from win10toast import ToastNotifier
 def compile_to_exe():
     # Path to the script to compile and the icon
     script_path = 'run.py'
-    icon_path = os.path.join('icons', 'custom-logo.ico')
+    icon_path = os.path.join('icons', 'custom-logo2.ico')
     
     # Compile the script to an executable
     subprocess.call([
