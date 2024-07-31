@@ -1,8 +1,8 @@
-[![Discord](https://img.shields.io/discord/1054578014593241179?style=flat&logo=discord&logoColor=ffffff&label=Discord&labelColor=0000ff&link=https%3A%2F%2Fdiscord.gg%2FdzqeXYDDmy)](https://discord.gg/dzqeXYDDmy) 
+[![Discord](https://img.shields.io/discord/1054578014593241179?style=flat&logo=discord&logoColor=ffffff&label=Discord&labelColor=0000ff&link=https%3A%2F%2Fdiscord.gg%2FdzqeXYDDmy)](https://discord.gg/dzqeXYDDmy)
 
 # Universal Discord Rich Presence
 
-Welcome to Universal Discord Rich Presence! This project brings together a collection of Discord Rich Presences with the added convenience of autodetecting the focused window.
+Welcome to **Universal Discord Rich Presence!** This project brings you an **automatic Rich Presence** (RPC) for Discord, displaying the current application you're using while your computer is on. It features full Discord integration with the **ability to rollback changes**, **an open-source codebase**, **automatic background updates**, and **minimal resource usage**. **No coding knowledge is required** to use this application. It is the first successful project for automatic RPC for Discord with an exceptional code structure and extensive application support.
 
 ## Requirements
 - Python >= 3.11
@@ -15,15 +15,19 @@ Welcome to Universal Discord Rich Presence! This project brings together a colle
 ## Features
 - **Focused App Autodetection:** Automatically detects the focused application.
 - **Instant Status Updates:** Changes your status as quickly as you switch between apps.
+- **Full Discord Integration:** Seamlessly integrates with Discord.
+- **Automatic Background Updates:** Keeps the application updated without manual intervention.
+- **Minimal Resource Usage:** Consumes 0% CPU and only 25MB of RAM.
+- **User-Friendly:** Requires no coding knowledge to use.
 - **Expandable RPC Collection:** Easily add more Rich Presence configurations as needed.
 
 ## Plans
-- [x] Complete the base collection 
-- [X] Optimize the code for better performance
-- [X] Introduce more user-friendly customization and interaction options
-- [X] Add full integration in discord
-- [X] Make auto-updater
-- [ ] Fix minor bugs
+- [x] Complete the base collection.
+- [x] Optimize the code for better performance.
+- [x] Introduce more user-friendly customization and interaction options.
+- [x] Add full integration in Discord.
+- [x] Implement auto-updater.
+- [ ] Fix minor bugs.
 
 ## Contributions and Support
 If you'd like to suggest new features or improvements, feel free to:
@@ -34,7 +38,6 @@ Your contributions and feedback are highly valued!
 
 ## Credits
 This project includes code forked and adapted from [Colin Hartigan's project](https://github.com/colinhartigan/valorant-rpc). We extend our gratitude for their amazing work.
-
 
 ### Version
 Version: 3.8
