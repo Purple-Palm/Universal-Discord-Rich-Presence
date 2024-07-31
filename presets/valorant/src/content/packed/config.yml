@@ -12,7 +12,7 @@ force_default_id: false
 # TEMPLATE TO ADD A PROGRAM 
 # FOR YOU TO COPY
 template:
-   TheProgram: # Like a short program name or ID (e. steam: , SPOTIFY: , VSCode: , EpicGamesLauncher)
+  TheProgram: # Like a short program name or ID (e. steam: , SPOTIFY: , VSCode: , EpicGamesLauncher)
     name: The Program # Name that will be displayed in the console 
     enable: true # Enable/Disable detection and display of this program
     executable: Program.exe # Program Executable process that is detected when focused
