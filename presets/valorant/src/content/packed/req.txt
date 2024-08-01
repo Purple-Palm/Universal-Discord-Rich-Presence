@@ -18,3 +18,10 @@ pyyaml
 pyshortcuts
 winshell 
 win10toast
+black
+isort
+mypy
+pylint
+ruff
+nest_asyncio
+lcu-driver
