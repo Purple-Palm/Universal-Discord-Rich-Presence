@@ -2,12 +2,12 @@
 setlocal EnableDelayedExpansion
 cd data\packed
 for /d %%d in (*) do (
-    move "%%d" ..\..\..\..\..
+    move "%%d" ..\..\
     REM Wait for 1 second
     timeout /t 1 /nobreak >nul
 )
 for %%f in (*) do (
-    move "%%f" ..\..\..\..\..
+    move "%%f" ..\..\
     REM Wait for 1 second
     timeout /t 1 /nobreak >nul
 )
