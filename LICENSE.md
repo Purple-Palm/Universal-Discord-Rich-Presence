@@ -1,3 +1,5 @@
+BY-ND License
+
 Purple-Palm Dev License
 
 Copyright (c) 2024 Purple-Palm Dev
