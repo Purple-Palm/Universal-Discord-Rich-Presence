@@ -25,4 +25,3 @@ pylint
 ruff
 nest_asyncio
 lcu-driver
-pygetwindow

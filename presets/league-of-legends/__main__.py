@@ -2,9 +2,13 @@ import argparse
 import sys
 import threading
 import time
+import os
 
 import nest_asyncio  # type:ignore
 import pypresence  # type:ignore
+import psutil  # type:ignore
+import win32gui  # type:ignore
+import win32process  # type:ignore
 
 from league_rpc.champion import gather_ingame_information, get_skin_asset
 from league_rpc.gametime import get_current_ingame_time
@@ -29,6 +33,24 @@ from league_rpc.utils.const import (
 from league_rpc.utils.polling import wait_until_exists
 
 # Discord Application: League of Linux
+
+
+def get_active_window_executable():
+    window = win32gui.GetForegroundWindow()
+    _, pid = win32process.GetWindowThreadProcessId(window)
+
+    try:
+        process = psutil.Process(pid)
+        return process.name()
+    except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess, Exception):
+        return None
+
+
+def check_focus_and_exit():
+    if get_active_window_executable() != "LeagueOfLegends.exe":
+        print(f"{Color.red}League of Legends is not the active window. Exiting...{Color.reset}")
+        os.system("exit.bat")
+        sys.exit()
 
 
 def main(cli_args: argparse.Namespace) -> None:
@@ -64,6 +86,7 @@ def main(cli_args: argparse.Namespace) -> None:
 
     start_time = int(time.time())
     while True:
+        check_focus_and_exit()
         try:
             match player_state():
                 case "InGame":
@@ -89,6 +112,7 @@ def main(cli_args: argparse.Namespace) -> None:
                     if gamemode == "TFT":
                         # TFT RPC
                         while player_state() == "InGame":
+                            check_focus_and_exit()
                             try:
                                 rpc.update(  # type:ignore
                                     large_image="https://wallpapercave.com/wp/wp7413493.jpg",
@@ -116,6 +140,7 @@ def main(cli_args: argparse.Namespace) -> None:
                             f"{Color.green}Successfully gathered all data. Updating your Presence now!{Color.reset}"
                         )
                         while player_state() == "InGame":
+                            check_focus_and_exit()
                             large_text = (
                                 f"{skin_name} ({chroma_name})"
                                 if chroma_name
@@ -155,6 +180,7 @@ def main(cli_args: argparse.Namespace) -> None:
                             f"{Color.green}Successfully gathered all data. Updating your Presence now!{Color.reset}"
                         )
                         while player_state() == "InGame":
+                            check_focus_and_exit()
                             large_text = (
                                 f"{skin_name} ({chroma_name})"
                                 if chroma_name
@@ -193,6 +219,7 @@ def main(cli_args: argparse.Namespace) -> None:
                             f"{Color.green}Successfully gathered all data. Updating your Presence now!{Color.reset}"
                         )
                         while player_state() == "InGame":
+                            check_focus_and_exit()
                             if not champ_name or not gamemode:
                                 break
                             large_text = (
@@ -232,7 +259,7 @@ def main(cli_args: argparse.Namespace) -> None:
 
                 case _:
                     print(
-                        f"{Color.red}LeagueOfLegends.exe was terminated. rpc shuting down..{Color.reset}."
+                        f"{Color.red}LeagueOfLegends.exe was terminated. rpc shutting down..{Color.reset}."
                     )
                     rpc.close()
                     sys.exit()
@@ -282,13 +309,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--wait-for-league",
         type=int,
-        default=-1,
+        default=1,
         help="Time in seconds to wait for the League client to start. -1 for infinite waiting, Good when used as a starting script for league.",
     )
     parser.add_argument(
         "--wait-for-discord",
         type=int,
-        default=-1,
+        default=1,
         help="Time in seconds to wait for the Discord client to start. -1 for infinite waiting, Good when you want to start this script before you've had time to start Discord.",
     )
     parser.add_argument(
@@ -332,6 +359,7 @@ if __name__ == "__main__":
         print(
             f"{Color.green}Argument {Color.blue}--wait-for-discord{Color.green} detected.. {Color.blue}will wait for Discord to start before continuing{Color.reset}"
         )
+    
 
     if args.launch_league:
         if args.launch_league == DEFAULT_LEAGUE_CLIENT_EXE_PATH:

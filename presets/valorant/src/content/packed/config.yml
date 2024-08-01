@@ -224,3 +224,9 @@ programs:
     enable: true
     executable: VALORANT-Win64-Shipping.exe
     custom_rpc_executable_path: python presets/valorant/VALORANT-Win64-Shipping.py
+
+  Semebody's LoL RPC:
+    name: League-of-legends
+    enable: true
+    executable: VALORANT-Win64-Shipping.exe
+    custom_rpc_executable_path: python presets/valorant/VALORANT-Win64-Shipping.py
