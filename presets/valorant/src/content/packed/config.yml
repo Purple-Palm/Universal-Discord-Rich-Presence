@@ -228,5 +228,6 @@ programs:
   Semebody's LoL RPC:
     name: League-of-legends
     enable: true
-    executable: VALORANT-Win64-Shipping.exe
-    custom_rpc_executable_path: python presets/valorant/VALORANT-Win64-Shipping.py
+    executable: LeagueOfLegends.exe
+    custom_rpc_executable_path: subprocess.Popen(os.path.join('presets/league-of-legends/start.bat'), creationflags=subprocess.CREATE_NO_WINDOW)
+
