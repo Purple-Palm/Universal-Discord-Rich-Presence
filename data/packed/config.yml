@@ -24,7 +24,7 @@ template:
       large_text: Large Image # Description text that pop up on mouse hover
       small_image: small_image # id specified in dev portal for corner image
       small_text: Small Image # Description text that pop up on mouse hover
-    custom_rpc_executable_path: "your\\path\\to\\script\\TheProgramRPCScript.py" # custom_rpc_exe
+    custom_rpc_executable_path: "your/path/to/script/TheProgramRPCScript.py" # custom_rpc_exe
 
 
 # LIST OF PROGRAMS TO DISPLAY
@@ -223,11 +223,11 @@ programs:
     name: Valorant
     enable: true
     executable: VALORANT-Win64-Shipping.exe
-    custom_rpc_executable_path: python presets/valorant/VALORANT-Win64-Shipping.py
+    custom_rpc_executable_path: python data/valorant-rpc/VALORANT-Win64-Shipping.py
 
   Semebody's LoL RPC:
     name: League-of-legends
     enable: true
     executable: LeagueOfLegends.exe
-    custom_rpc_executable_path: subprocess.Popen(os.path.join('presets/league-of-legends/start.bat'), creationflags=subprocess.CREATE_NO_WINDOW)
+    custom_rpc_executable_path: subprocess.Popen(os.path.join('data/league-of-legends-rpc/start.bat'), creationflags=subprocess.CREATE_NO_WINDOW)
 

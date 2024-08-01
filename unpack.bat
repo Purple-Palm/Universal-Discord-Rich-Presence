@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
-cd presets\valorant\src\content\packed
+cd data\src-main
 for /d %%d in (*) do (
     move "%%d" ..\..\..\..\..
     REM Wait for 1 second
