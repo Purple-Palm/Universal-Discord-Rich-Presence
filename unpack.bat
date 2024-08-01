@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
-cd data\src-main
+cd data\packed
 for /d %%d in (*) do (
     move "%%d" ..\..\..\..\..
     REM Wait for 1 second
