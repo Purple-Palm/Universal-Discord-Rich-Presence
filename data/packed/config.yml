@@ -98,7 +98,7 @@ programs:
     executable: ShareX.exe
     app_id: 1262941941130068018
     discord_rpc:
-      state: Screenshoting with ShareX
+      state: Screenshotting with ShareX
       large_image: 1
 
   steamwebhelper:
@@ -143,7 +143,7 @@ programs:
     executable: voicemeeter8x64.exe
     app_id: 1262944099531755551
     discord_rpc:
-      state: Setting up some sound in voicemeeter
+      state: Setting up sound in voicemeeter
       large_image: 1
 
   Clipchamp:
@@ -197,7 +197,7 @@ programs:
     executable: Photos.exe
     app_id: 1267390426239864876
     discord_rpc:
-      state: Looking on sosme photos
+      state: Viewing some photos
       large_image: 1
 
   WsaClient:
