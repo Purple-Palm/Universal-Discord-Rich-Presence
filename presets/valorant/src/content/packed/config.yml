@@ -24,6 +24,16 @@ template:
       large_text: Large Image # Description text that pop up on mouse hover
       small_image: small_image # id specified in dev portal for corner image
       small_text: Small Image # Description text that pop up on mouse hover
+      # Add up to TWO buttons
+      # label is button text, url is destination after button is pressed
+      buttons: [ 
+        { 
+          label: "button1", url: "https://google.com"
+        },
+        {
+          label: "button2", url: "https://none.com"
+        }
+      ]
     custom_rpc_executable_path: "your\\path\\to\\script\\TheProgramRPCScript.py" # custom_rpc_exe
 
 
@@ -231,3 +241,18 @@ programs:
     executable: LeagueOfLegends.exe
     custom_rpc_executable_path: subprocess.Popen(os.path.join('presets/league-of-legends/start.bat'), creationflags=subprocess.CREATE_NO_WINDOW)
 
+  # Dyl's Roblox RPC:
+  #   name: Roblox
+  #   enable: true
+  #   executable: RobloxPlayerBeta.exe
+  #   app_id: 1155101158780702830
+  #   discord_rpc:
+  #     buttons: [
+  #         {
+  #           "label": "Join server" , "url": "roblox://experiences/start?placeId={placeId}&gameInstanceId={jobId}"
+  #           }, 
+  #         {
+  #           "label": "View on website" ,"url": "https://www.roblox.com/games/{placeId}/"
+  #           }
+  #         ]
+  #   custom_rpc_executable_path: python presets/roblox/RobloxPlayerBeta.py
