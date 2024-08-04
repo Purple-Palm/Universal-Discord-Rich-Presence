@@ -249,10 +249,10 @@ programs:
   #   discord_rpc:
   #     buttons: [
   #         {
-  #           "label": "Join server" , "url": "roblox://experiences/start?placeId={placeId}&gameInstanceId={jobId}"
+  #           "label": "Join server" , "url": "roblox://experiences/start?placeId={PLACEID}&gameInstanceId={JOBID}"
   #           }, 
   #         {
-  #           "label": "View on website" ,"url": "https://www.roblox.com/games/{placeId}/"
+  #           "label": "View on website" ,"url": "https://www.roblox.com/games/{PLACEID}/"
   #           }
   #         ]
   #   custom_rpc_executable_path: python presets/roblox/RobloxPlayerBeta.py

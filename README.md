@@ -38,7 +38,11 @@ Your contributions and feedback are highly valued!
 
 ## Credits
 This project includes code forked and adapted from [Colin Hartigan's project](https://github.com/colinhartigan/valorant-rpc). 
+
 This project also includes code forked and adapted from [Haze's project](https://github.com/Its-Haze/league-rpc).
+
+This project also includes code forked and adapted from [Dyl's project](https://github.com/kdouy/RobloxDiscordRPC).
+
 We extend our gratitude for their amazing work.
 
 ### Version
