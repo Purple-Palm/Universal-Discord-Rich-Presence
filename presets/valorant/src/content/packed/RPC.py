@@ -77,10 +77,9 @@ def get_config_status_data(present, program_id):
                 # print("app_id:", app_id)
 
                 # Pull all activity data for RPC from discord_rpc into a dictionary
-                activity = {key: str(value) for key, value in program['discord_rpc'].items()}
+                activity = {key: str(value) if type(value) is not list else value for key, value in program['discord_rpc'].items()}
                 # print("activity:", activity)
 
-                
             else: 
                 app_id = None; activity = None
                 
