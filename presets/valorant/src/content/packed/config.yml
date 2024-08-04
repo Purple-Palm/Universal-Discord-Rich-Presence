@@ -241,18 +241,18 @@ programs:
     executable: LeagueOfLegends.exe
     custom_rpc_executable_path: subprocess.Popen(os.path.join('presets/league-of-legends/start.bat'), creationflags=subprocess.CREATE_NO_WINDOW)
 
-  # Dyl's Roblox RPC:
-  #   name: Roblox
-  #   enable: true
-  #   executable: RobloxPlayerBeta.exe
-  #   app_id: 1155101158780702830
-  #   discord_rpc:
-  #     buttons: [
-  #         {
-  #           "label": "Join server" , "url": "roblox://experiences/start?placeId={PLACEID}&gameInstanceId={JOBID}"
-  #           }, 
-  #         {
-  #           "label": "View on website" ,"url": "https://www.roblox.com/games/{PLACEID}/"
-  #           }
-  #         ]
-  #   custom_rpc_executable_path: python presets/roblox/RobloxPlayerBeta.py
+  Dyl's Roblox RPC:
+    name: Roblox
+    enable: true
+    executable: RobloxPlayerBeta.exe
+    app_id: 1155101158780702830
+    discord_rpc:
+      buttons: [
+          {
+            "label": "Join server" , "url": "roblox://experiences/start?placeId={PLACEID}&gameInstanceId={JOBID}"
+            }, 
+          {
+            "label": "View on website" ,"url": "https://www.roblox.com/games/{PLACEID}/"
+            }
+          ]
+    custom_rpc_executable_path: python presets/roblox/RobloxPlayerBeta.py
