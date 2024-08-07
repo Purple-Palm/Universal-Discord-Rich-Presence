@@ -46,4 +46,4 @@ This project also includes code forked and adapted from [Dyl's project](https://
 We extend our gratitude for their amazing work.
 
 ### Version
-Version: 6.0.0
+Version: 6.0.1
