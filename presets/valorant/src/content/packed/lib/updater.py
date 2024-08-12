@@ -62,9 +62,9 @@ def check_for_updates():
         # Send notification for no update
         toaster.show_toast("✅ No Update Found", "RPC script is up-to-date.", duration=10)
 
-    # If no update, run main.bat in the background   ###No need to run anymore
-    #main_bat_path = os.path.join('main-start.bat')
-    #subprocess.Popen(main_bat_path, creationflags=subprocess.CREATE_NO_WINDOW)
+    # If no update, run main.bat in the background
+    main_bat_path = os.path.join('RPC.bat')
+    subprocess.Popen(main_bat_path, creationflags=subprocess.CREATE_NO_WINDOW)
 
 if __name__ == "__main__":
     check_for_updates()

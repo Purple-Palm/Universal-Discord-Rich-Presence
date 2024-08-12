@@ -51,15 +51,15 @@ def main():
         ]
     )
     work_dir = read_config()
-    updater_path = os.path.join(work_dir, "lib", "updater.py")
-    RPC_path = os.path.join(work_dir, "RPC.py")
+    updater_path = os.path.join(work_dir, "updater.bat")
+    RPC_path = os.path.join(work_dir, "RPC.bat")
     print(f"Running {updater_path}...")
     subprocess.Popen([updater_path], shell=True)
     print("Updater started. Exiting run.py.")
 
-    print(f"Running {RPC_path}...")
-    subprocess.Popen([RPC_path], shell=True)
-    print("RPC started. Exiting run.py.")
+    #print(f"Running {RPC_path}...")
+    #subprocess.Popen([RPC_path], shell=True)
+    #print("RPC started. Exiting run.py.")
     
 if __name__ == "__main__":
     print("By Cactus and VGSS_")
