@@ -15,25 +15,25 @@ ping 127.0.0.1 -n 2 > nul
 
 if exist "compiler.py" (
     echo Found folder "compiler.py", attempting to delete...
-    rmdir /f /q "compiler.py" && echo Deleted folder "compiler.py" || echo Failed to delete folder "compiler.py"
+    del /f /q "compiler.py" && echo Deleted folder "compiler.py" || echo Failed to delete folder "compiler.py"
 )
 ping 127.0.0.1 -n 2 > nul
 
 if exist "req.txt" (
     echo Found folder "req.txt", attempting to delete...
-    rmdir /f /q "req.txt" && echo Deleted folder "req.txt" || echo Failed to delete folder "req.txt"
+    del /f /q "req.txt" && echo Deleted folder "req.txt" || echo Failed to delete folder "req.txt"
 )
 ping 127.0.0.1 -n 2 > nul
 
 if exist "run.py" (
     echo Found folder "run.py", attempting to delete...
-    rmdir /f /q "run.py" && echo Deleted folder "run.py" || echo Failed to delete folder "run.py"
+    del /f /q "run.py" && echo Deleted folder "run.py" || echo Failed to delete folder "run.py"
 )
 ping 127.0.0.1 -n 2 > nul
 
 if exist "setup.bat" (
     echo Found folder "setup.bat", attempting to delete...
-    rmdir /f /q "setup.bat" && echo Deleted folder "setup.bat" || echo Failed to delete folder "setup.bat"
+    del /f /q "setup.bat" && echo Deleted folder "setup.bat" || echo Failed to delete folder "setup.bat"
 )
 ping 127.0.0.1 -n 2 > nul
 
