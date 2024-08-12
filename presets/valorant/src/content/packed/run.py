@@ -51,14 +51,13 @@ def main():
             ('Green', "Starting"), ('', ' RPC script.')
         ]
     )
-    #work_dir = read_config()
-    #bat_path = os.path.join(work_dir, "main.bat")
-    #print(f"Running {bat_path}...")
-    #subprocess.Popen([bat_path], shell=True)
-    #print("Updater started. Exiting run.py.")
+    work_dir = read_config()
+    updater_path = os.path.join(work_dir, "updater.py")
+    print(f"Running {updater_path}...")
+    subprocess.Popen([updater_path], shell=True)
+    print("Updater started. Exiting run.py.")
     
 if __name__ == "__main__":
     print("By Cactus and VGSS_")
-    check_for_updates()
     main()
 
