@@ -112,4 +112,4 @@ if __name__ == "__main__":
     delete_original_shortcuts()
     create_new_shortcuts()
     send_notification()
-    start_discord()
+    #start_discord()
