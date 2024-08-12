@@ -149,7 +149,8 @@ def main():
 
 # LOADING DATA FROM CONFIG 
 try:
-    with open("config.yml", "r") as file:
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config.yml')
+    with open(config_path, "r") as file:
         config = yaml.safe_load(file)
 except Exception as error:
     color_print(
@@ -160,6 +161,7 @@ except Exception as error:
             ('',f"\n{type(error), error}") 
         ] 
     )
+
 
     
 

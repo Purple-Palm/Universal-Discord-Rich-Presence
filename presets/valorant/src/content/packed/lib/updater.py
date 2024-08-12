@@ -9,9 +9,10 @@ import subprocess
 def check_for_updates():
     # Define paths
     working_dir = os.path.dirname(os.path.realpath(__file__))
-    version_file_path = os.path.join(working_dir, 'version.yml')
+    parent_dir = os.path.abspath(os.path.join(working_dir, '..'))
+    version_file_path = os.path.join(parent_dir, 'version.yml')
     desktop_path = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
-    bat_file_path = os.path.join(working_dir, 'reinstaller.bat')
+    bat_file_path = os.path.join(parent_dir, 'reinstaller.bat')
 
     # Load the local version
     with open(version_file_path, 'r') as version_file:
