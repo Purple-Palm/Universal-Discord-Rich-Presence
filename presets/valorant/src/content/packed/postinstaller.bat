@@ -12,7 +12,6 @@ taskkill /F /IM python3.11.exe /T
 
 ping 127.0.0.1 -n 2 > nul
 
-cd ..
 
 if exist "compiler.py" (
     echo Found folder "compiler.py", attempting to delete...
