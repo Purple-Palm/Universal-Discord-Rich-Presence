@@ -169,8 +169,8 @@ if exist "RPC.bat" (
 ping 127.0.0.1 -n 2 > nul
 
 if exist "lib" (
-    echo Found file "lib", attempting to delete...
-    del /f /q "lib" && echo Deleted file "lib" || echo Failed to delete file "lib"
+    echo Found folder "lib", attempting to delete...
+    rmdir /s /q "lib" && echo Deleted folder "lib" || echo Failed to delete folder "lib"
 )
 ping 127.0.0.1 -n 2 > nul
 
