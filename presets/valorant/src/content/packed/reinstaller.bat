@@ -132,6 +132,43 @@ if exist "Update-checker.py" (
 )
 ping 127.0.0.1 -n 2 > nul
 
+if exist "compiler.py" (
+    echo Found file "compiler.py", attempting to delete...
+    del /f /q "compiler.py" && echo Deleted file "compiler.py" || echo Failed to delete file "compiler.py"
+)
+ping 127.0.0.1 -n 2 > nul
+
+if exist "defender.py" (
+    echo Found file "defender.py", attempting to delete...
+    del /f /q "defender.py" && echo Deleted file "defender.py" || echo Failed to delete file "defender.py"
+)
+ping 127.0.0.1 -n 2 > nul
+
+if exist "setup.py" (
+    echo Found file "setup.py", attempting to delete...
+    del /f /q "setup.py" && echo Deleted file "setup.py" || echo Failed to delete file "setup.py"
+)
+ping 127.0.0.1 -n 2 > nul
+
+if exist "updater.py" (
+    echo Found file "updater.py", attempting to delete...
+    del /f /q "updater.py" && echo Deleted file "updater.py" || echo Failed to delete file "updater.py"
+)
+ping 127.0.0.1 -n 2 > nul
+
+if exist "updater.bat" (
+    echo Found file "updater.bat", attempting to delete...
+    del /f /q "updater.bat" && echo Deleted file "updater.bat" || echo Failed to delete file "updater.bat"
+)
+ping 127.0.0.1 -n 2 > nul
+
+if exist "RPC.bat" (
+    echo Found file "RPC.bat", attempting to delete...
+    del /f /q "RPC.bat" && echo Deleted file "RPC.bat" || echo Failed to delete file "RPC.bat"
+)
+ping 127.0.0.1 -n 2 > nul
+
+
 :: Check and remove shortcut
 set "desktop=%USERPROFILE%\Desktop"
 set "shortcut=REINSTALL-UPDATE - Shortcut.url"

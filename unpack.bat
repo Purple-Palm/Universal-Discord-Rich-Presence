@@ -18,5 +18,6 @@ cd ..
 cd ..
 cd ..
 cd ..
-call BACKUP.bat
+cd lib
+call backup.bat
 endlocal
