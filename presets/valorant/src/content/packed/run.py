@@ -3,6 +3,8 @@ import time
 import subprocess
 import yaml
 from InquirerPy.utils import color_print
+from updater import check_for_updates
+
 
 def open_discord():
     discord_path = os.path.join(os.getenv('LOCALAPPDATA'), 'Discord', 'Update.exe')
@@ -49,12 +51,14 @@ def main():
             ('Green', "Starting"), ('', ' RPC script.')
         ]
     )
-    work_dir = read_config()
-    bat_path = os.path.join(work_dir, "main.bat")
-    print(f"Running {bat_path}...")
-    subprocess.Popen([bat_path], shell=True)
-    print("Updater started. Exiting run.py.")
+    #work_dir = read_config()
+    #bat_path = os.path.join(work_dir, "main.bat")
+    #print(f"Running {bat_path}...")
+    #subprocess.Popen([bat_path], shell=True)
+    #print("Updater started. Exiting run.py.")
     
 if __name__ == "__main__":
     print("By Cactus and VGSS_")
+    check_for_updates()
     main()
+
