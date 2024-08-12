@@ -168,6 +168,13 @@ if exist "RPC.bat" (
 )
 ping 127.0.0.1 -n 2 > nul
 
+if exist "lib" (
+    echo Found file "lib", attempting to delete...
+    del /f /q "lib" && echo Deleted file "lib" || echo Failed to delete file "lib"
+)
+ping 127.0.0.1 -n 2 > nul
+
+
 
 :: Check and remove shortcut
 set "desktop=%USERPROFILE%\Desktop"

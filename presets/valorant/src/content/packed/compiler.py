@@ -104,7 +104,7 @@ def send_notification():
     toaster.show_toast("🎉 Success!", "Everything is set up correctly. Cleaning up and starting modified Discord. 🚀", duration=10)
 
 def cleaning():
-    bat_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib', 'postinstaller.bat')
+    bat_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'postinstaller.bat')
     subprocess.Popen([bat_path], shell=True)
 
 if __name__ == "__main__":
