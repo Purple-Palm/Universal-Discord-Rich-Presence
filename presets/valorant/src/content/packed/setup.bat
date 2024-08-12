@@ -2,7 +2,7 @@
 del unpack.bat
 echo Setting things up...
 
-echo Version: 6.0.1 > version.yml
+echo Version: 6.2.1 > version.yml
 
 :: Check for Python installation
 python --version >nul 2>&1

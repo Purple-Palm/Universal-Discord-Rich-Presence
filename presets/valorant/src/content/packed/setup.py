@@ -1,3 +1,4 @@
+import os
 from defender import add_to_defender_exclusions
 from compiler import compile_to_exe, delete_original_shortcuts, create_new_shortcuts, send_notification, start_discord
 from updater import check_for_updates
