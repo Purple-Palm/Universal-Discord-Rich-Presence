@@ -199,8 +199,8 @@ for /f "delims=" %%i in ('dir /b /a') do move "%%i" ..
 cd ..
 rmdir /s /q Universal-Discord-Rich-Presence
 
-echo Running unpack.bat...
-call unpack.bat
+echo Running install.exe...
+start "" "install.exe"
 
 echo Update/Reinstall process completed.
 pause
