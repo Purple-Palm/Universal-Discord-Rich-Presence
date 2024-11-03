@@ -9,7 +9,7 @@ Welcome to **Universal Discord Rich Presence!** This project brings you an **aut
 
 ## Setup
 1. Ensure Python is installed.
-2. Run `unpack.bat` to set up everything effortlessly.
+2. Run `install` file to set up everything effortlessly.
 3. If you encounter any issues or have questions, join our [Discord server](https://discord.gg/dzqeXYDDmy) and let us know where you need assistance.
 
 ## Features
