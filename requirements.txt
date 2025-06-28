@@ -25,5 +25,3 @@ pylint
 ruff
 nest_asyncio
 lcu-driver
-win32gui
-win32process
