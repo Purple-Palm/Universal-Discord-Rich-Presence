@@ -25,3 +25,5 @@ pylint
 ruff
 nest_asyncio
 lcu-driver
+winshell
+win10toast
