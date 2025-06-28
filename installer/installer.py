@@ -5,7 +5,7 @@ import shutil
 import winshell
 from win10toast import ToastNotifier
 
-#Config
+# --- Configuration ---
 VENV_DIR = ".venv"
 REQUIREMENTS_FILE = "requirements.txt"
 MAIN_SCRIPT_PATH = os.path.join("src", "main.py")
@@ -33,7 +33,7 @@ def check_python():
         version = subprocess.check_output([sys.executable, "--version"], text=True).strip()
         print_success(f"Python found: {version}")
     except (subprocess.CalledProcessError, FileNotFoundError):
-        print_error("Python is not installed or not in your system's PATH. Please install Python 3.11+ and try again.") #Will be added automated python installation in the future
+        print_error("Python is not installed or not in your system's PATH. Please install Python 3.11+ and try again.")
 
 def create_virtual_environment():
     """Creates a virtual environment if it doesn't exist."""
@@ -83,16 +83,17 @@ def create_desktop_shortcut():
         
     script_to_run = os.path.join(os.getcwd(), MAIN_SCRIPT_PATH)
     
-    # Useing winshell to create the shortcut
+    # Use winshell to create the shortcut
     try:
         with winshell.shortcut(shortcut_path) as shortcut:
             shortcut.path = target_executable
             shortcut.arguments = f'"{script_to_run}"'
             shortcut.working_directory = os.getcwd()
             shortcut.description = "Universal Discord Rich Presence"
+            # You can set an icon if you have one in the assets folder
             icon_path = os.path.join(os.getcwd(), "assets", "icons", "app.ico")
             if os.path.exists(icon_path):
-                 shortcut.icon_location = (icon_path, 0)
+                shortcut.icon_location = (icon_path, 0)
         
         print_success(f"Shortcut created on your desktop: '{SHORTCUT_NAME}'")
     except Exception as e:
