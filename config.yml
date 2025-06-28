@@ -207,7 +207,7 @@ programs:
     executable: Photos.exe
     app_id: 1267390426239864876
     discord_rpc:
-      state: Looking on sosme photos
+      state: Looking on some photos
       large_image: 1
 
   WsaClient:
