@@ -250,7 +250,7 @@ programs:
 # CUSTOM RPCS
   "Colin's Valorant RPC":
     name: Valorant
-    enable: true
+    enable: false # Deprecated, under development
     executable: VALORANT-Win64-Shipping.exe
     custom_rpc_executable_path: python presets/valorant/VALORANT-Win64-Shipping.py
 
@@ -268,10 +268,10 @@ programs:
             "label": "View on website" ,"url": "https://www.roblox.com/games/{PLACEID}/"
             }
           ]
-    custom_rpc_executable_path: python presets/roblox/RobloxPlayerBeta.py
+    custom_rpc_executable_path: python src/modules/roblox.py
 
   "Semebody's LoL RPC":
     name: League-of-legends
-    enable: true
+    enable: false # Deprecated, under development
     executable: LeagueOfLegends.exe
     custom_rpc_executable_path: python presets/league-of-legends/lol_rpc.py
