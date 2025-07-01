@@ -1,4 +1,4 @@
-#Work directory
+# Work directory
 work_dir: ""
 
 # In case if you want to use only one application
@@ -39,209 +39,222 @@ template:
 
 # LIST OF PROGRAMS TO DISPLAY
 programs:
-  Discord: #program_id
-    name: Discord 
-    enable: true
-    executable: Discord.exe 
-    app_id: 1262946659701096498 
-    discord_rpc: 
-      state: Chillin' in Discord 
-      large_image: 1
-    
-  EpicGamesLauncher: 
-    name: Epic Games Launcher
-    enable: true
-    executable: EpicGamesLauncher.exe
-    app_id: 1263022294993731634
-    discord_rpc:
-      state: Choosing a game to play
-      large_image: 1
-
-  FileExplorer:
-    name: File Explorer
-    enable: true
-    executable: explorer.exe
-    app_id: 1262972467404865596
-    discord_rpc:
-      state: Browsing some files
-      large_image: 1
-
-  MicrosoftEdge:
-    name: Edge Browser
-    enable: true
-    executable: msedge.exe
-    app_id: 1262929038826016768
-    discord_rpc:
-      state: Browsing pages
-      large_image: 1
-
-  notepad:
-    name: Notepad
-    enable: true
-    executable: Notepad.exe
-    app_id: 1262987354524749906
-    discord_rpc:
-      state: Taking some notes
-      large_image: 1
-
-  NZXT_CAM:
-    name: NZXT CAM
-    enable: true
-    executable: NZXT CAM.exe
-    app_id: 1262983230945235065
-    discord_rpc:
-      state: Setting up NZXT devices
-      large_image: 1
-
-  RiotClient:
-    name: Riot Client
-    enable: true
-    executable: Riot Client.exe
-    app_id: 1262989311628808275
-    discord_rpc:
-      state: Choosing a game to play
-      large_image: 1
-
-  ShareX:
-    name: ShareX
-    enable: true
-    executable: ShareX.exe
-    app_id: 1262941941130068018
-    discord_rpc:
-      state: Screenshoting with ShareX
-      large_image: 1
-
-  steamwebhelper:
-    name: steamwebhelper
-    enable: true
-    executable: steamwebhelper.exe
-    app_id: 1262973733472305283
-    discord_rpc:
-      state: Choosing a game to play
-      large_image: 1
-
-  Telegram:
-    name: Telegram
-    enable: true
-    executable: Telegram.exe
-    app_id: 1262937085635985409
-    discord_rpc:
-      state: Chatting in Telegram
-      large_image: 1
 
   AyuGram:
     name: AyuGram Desktop
     enable: false
     executable: ayugram.exe
-    app_id: 
+    app_id:  #None ID
     discord_rpc:
-      state: Chatting in Ayugram
+      state: Messaging privately.
       large_image: 1
 
-  VLCplayer:
-    name: VLC Media Player
+  BraveBrowser:
+    name: Brave Browser
     enable: true
-    executable: vlc.exe
-    app_id: 1262981573305700352
+    executable: brave.exe
+    app_id: 1388726055736442942
     discord_rpc:
-      state: Playing media
-      large_image: 1
-  
-  voicemeeter8x64:
-    name: voicemeeter8x64
-    enable: true
-    executable: voicemeeter8x64.exe
-    app_id: 1262944099531755551
-    discord_rpc:
-      state: Setting up some sound in voicemeeter
+      state: Browsing the web.
       large_image: 1
 
   Clipchamp:
     name: Clipchamp
     enable: true
     executable: Clipchamp.exe
-    app_id: 1266991923625984064
+    app_id: 1266991923625984064 #Old ID
     discord_rpc:
-      state: Editing video in Clipchamp
+      state: Editing a video.
       large_image: 1
 
   cmd:
     name: cmd
     enable: true
     executable: cmd.exe
-    app_id: 1267022953489498193
+    app_id: 1388819762896830604 #Using Windows Terminal app_id
     discord_rpc:
-      state: Debugging in CMD
+      state: Using the command line.
       large_image: 1
 
-  WindowsTerminal:
-    name: WindowsTerminal
+  Discord:
+    name: Discord 
     enable: true
-    executable: WindowsTerminal.exe
-    app_id: 1267022953489498193
+    executable: Discord.exe 
+    app_id: 1262946659701096498 #Old ID
+    discord_rpc: 
+      state: Chatting.
+      large_image: 1
+    
+  EpicGamesLauncher: 
+    name: Epic Games Launcher
+    enable: true
+    executable: EpicGamesLauncher.exe
+    app_id: 1388827424795394239
     discord_rpc:
-      state: Debugging in Windows Terminal
+      state: Picking a game to play.
+      large_image: 1
+
+  FileExplorer:
+    name: File Explorer
+    enable: true
+    executable: explorer.exe
+    app_id: 1388738026821259314
+    discord_rpc:
+      state: Browsing files.
+      large_image: 1
+  
+  GitHubDesktop:
+    name: GitHubDesktop
+    enable: true
+    executable: GitHubDesktop.exe
+    app_id: 1388829761463386203
+    discord_rpc:
+      state: Managing repositories.
+      large_image: 1
+
+  MicrosoftEdge:
+    name: Edge Browser
+    enable: true
+    executable: msedge.exe
+    app_id: 1389356353348440176
+    discord_rpc:
+      state: Browsing the web.
+      large_image: 1
+
+  notepad:
+    name: Notepad
+    enable: true
+    executable: Notepad.exe
+    app_id: 1388825324787208192
+    discord_rpc:
+      state: Taking down notes.
+      large_image: 1
+
+  NZXT_CAM:
+    name: NZXT CAM
+    enable: true
+    executable: NZXT CAM.exe
+    app_id: 1389359521431814266
+    discord_rpc:
+      state: Monitoring system performance.
+      large_image: 1
+      
+  Photos:
+    name: Photos
+    enable: true
+    executable: Photos.exe
+    app_id: 1389017465182486568
+    discord_rpc:
+      state: Browsing photos.
+      large_image: 1
+
+  RiotClient:
+    name: Riot Client
+    enable: true
+    executable: Riot Client.exe
+    app_id: 1389360664673521805
+    discord_rpc:
+      state: Accessing Riot Games titles.
+      large_image: 1
+
+  Spotify:
+    name: Spotify
+    enable: true
+    executable: Spotify.exe
+    app_id: 1388898282457141270
+    discord_rpc:
+      state: Choosing music to listen to.
+      large_image: 1
+
+  ShareX:
+    name: ShareX
+    enable: true
+    executable: ShareX.exe
+    app_id: 1389361256141685059
+    discord_rpc:
+      state: Capturing and sharing.
+      large_image: 1
+
+  steamwebhelper:
+    name: steamwebhelper
+    enable: true
+    executable: steamwebhelper.exe
+    app_id: 1389363389083680921
+    discord_rpc:
+      state: Browsing the game library.
       large_image: 1
 
   SystemSettings:
     name: SystemSettings
-    enable: true
+    enable: false # Deprecated, now it is ApplicationFrameHost.exe
     executable: SystemSettings.exe
     app_id: 1267241964353355886
     discord_rpc:
-      state: Setting up the PC
+      state: Changing PC settings.
       large_image: 2 #Do not change
 
   Taskmgr:
     name: Taskmgr
     enable: true
     executable: Taskmgr.exe
-    app_id: 1267244049451192442
+    app_id: 1388898666131226674
     discord_rpc:
-      state: Monitoring processes
+      state: Monitoring system processes.
       large_image: 1
-
-  Photos:
-    name: Photos
+      
+  Telegram:
+    name: Telegram
     enable: true
-    executable: Photos.exe
-    app_id: 1267390426239864876
+    executable: Telegram.exe
+    app_id: 1389072642958430358
     discord_rpc:
-      state: Looking on some photos
+      state: Chatting with friends.
       large_image: 1
 
+  VLCplayer:
+    name: VLC Media Player
+    enable: false # Disabled for now, enable if you want to use it
+    executable: vlc.exe
+    app_id: 1262981573305700352
+    discord_rpc:
+      state: Playing media.
+      large_image: 1
+  
+  voicemeeter8x64:
+    name: voicemeeter8x64
+    enable: false # Disabled for now, enable if you want to use it
+    executable: voicemeeter8x64.exe
+    app_id: 1262944099531755551
+    discord_rpc:
+      state: Configuring audio.
+      large_image: 1
+
+  WindowsTerminal:
+    name: WindowsTerminal
+    enable: true
+    executable: WindowsTerminal.exe
+    app_id: 1388819762896830604
+    discord_rpc:
+      state: Using the terminal.
+      large_image: 1
+      
   WsaClient:
     name: WsaClient
-    enable: true
+    enable: false # Disabled for now, enable if you want to use it
     executable: WsaClient.exe
     app_id: 1267985784644829266
     discord_rpc:
-      state: Running in android emulation
+      state: Using an Android app.
       large_image: 1
 
-  GitHubDesktop:
-    name: GitHubDesktop
-    enable: true
-    executable: GitHubDesktop.exe
-    app_id: 1267987396536827905
-    discord_rpc:
-      state: Choosing project to work on
-      large_image: 1
-
-
-  Colin's Valorant RPC:
+# CUSTOM RPCS
+  "Colin's Valorant RPC":
     name: Valorant
     enable: true
     executable: VALORANT-Win64-Shipping.exe
     custom_rpc_executable_path: python presets/valorant/VALORANT-Win64-Shipping.py
 
-  Semebody's LoL RPC:
-    name: League-of-legends
-    enable: true
-    executable: LeagueOfLegends.exe
-    custom_rpc_executable_path: subprocess.Popen(os.path.join('presets/league-of-legends/start.bat'), creationflags=subprocess.CREATE_NO_WINDOW)
-
-  Dyl's Roblox RPC:
+  "Dyl's Roblox RPC":
     name: Roblox
     enable: true
     executable: RobloxPlayerBeta.exe
@@ -256,3 +269,9 @@ programs:
             }
           ]
     custom_rpc_executable_path: python presets/roblox/RobloxPlayerBeta.py
+
+  "Semebody's LoL RPC":
+    name: League-of-legends
+    enable: true
+    executable: LeagueOfLegends.exe
+    custom_rpc_executable_path: python presets/league-of-legends/lol_rpc.py
