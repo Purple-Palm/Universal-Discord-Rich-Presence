@@ -1,7 +1,56 @@
 import os
 import sys
 import subprocess
-import shutil
+import time
+
+# These are the packages the installer script itself needs to run
+INSTALLER_DEPS = ['winshell', 'win10toast']
+
+def ensure_installer_deps():
+    """
+    Checks if the installer's own dependencies are met and installs them if not
+    """
+    print("[+] Checking for installer dependencies...")
+    try:
+        # Use the version of pip associated with the current python interpreter
+        pip_executable = [sys.executable, '-m', 'pip']
+        
+        # Run pip list to get installed packages
+        installed_packages_raw = subprocess.check_output(
+            pip_executable + ['list'], 
+            text=True, 
+            encoding='utf-8'
+        )
+        installed_packages = {line.split()[0].lower() for line in installed_packages_raw.splitlines()[2:]}
+
+        missing_deps = [dep for dep in INSTALLER_DEPS if dep.lower() not in installed_packages]
+
+        if not missing_deps:
+            print("    -> Success: All installer dependencies are present.")
+            return True
+
+        print(f"    -> Missing dependencies found: {', '.join(missing_deps)}. Installing...")
+        
+        # Install missing dependencies
+        subprocess.check_call(pip_executable + ['install'] + missing_deps)
+        
+        print("    -> Success: Installer dependencies installed.")
+        # Advise user to re-run if needed, as imports happen at the top level
+        print("\n[*] Please re-run the installer to continue.")
+        input("    Press Enter to exit.")
+        sys.exit(0)
+
+    except (subprocess.CalledProcessError, FileNotFoundError) as e:
+        print(f"\n[!] Error: Could not check or install dependencies. Ensure Python and pip are installed correctly. Details: {e}")
+        input("    Press Enter to exit.")
+        sys.exit(1)
+
+# --- Main Script Logic ---
+# First, ensure our own dependencies are met.
+ensure_installer_deps()
+
+# Now that we know the necessary packages are installed, we can import them.
+# This prevents the ImportError you discovered.
 import winshell
 from win10toast import ToastNotifier
 
@@ -9,7 +58,6 @@ from win10toast import ToastNotifier
 VENV_DIR = ".venv"
 REQUIREMENTS_FILE = "requirements.txt"
 MAIN_SCRIPT_PATH = os.path.join("src", "main.py")
-CONFIG_SRC_PATH = "config.yml"
 SHORTCUT_NAME = "Universal Discord RPC.lnk"
 
 def print_step(message):
@@ -48,11 +96,10 @@ def create_virtual_environment():
     except subprocess.CalledProcessError as e:
         print_error(f"Failed to create virtual environment. Details: {e}")
 
-def install_dependencies():
+def install_project_dependencies():
     """Installs dependencies from requirements.txt into the venv."""
-    print_step("Installing required packages...")
+    print_step("Installing project packages...")
     
-    # Determine the correct path to the python executable in the venv
     if sys.platform == "win32":
         python_executable = os.path.join(VENV_DIR, "Scripts", "python.exe")
     else:
@@ -62,11 +109,10 @@ def install_dependencies():
         print_error(f"'{REQUIREMENTS_FILE}' not found. Cannot install dependencies.")
 
     try:
-        # Install dependencies using the venv's pip
         subprocess.check_call([python_executable, "-m", "pip", "install", "-r", REQUIREMENTS_FILE])
-        print_success("All dependencies installed successfully.")
+        print_success("All project dependencies installed successfully.")
     except subprocess.CalledProcessError as e:
-        print_error(f"Failed to install dependencies. Details: {e}")
+        print_error(f"Failed to install project dependencies. Details: {e}")
 
 def create_desktop_shortcut():
     """Creates a desktop shortcut to run the main application."""
@@ -75,22 +121,19 @@ def create_desktop_shortcut():
     desktop_path = winshell.desktop()
     shortcut_path = os.path.join(desktop_path, SHORTCUT_NAME)
     
-    # The target is the venv's Python executable
     if sys.platform == "win32":
-        target_executable = os.path.join(os.getcwd(), VENV_DIR, "Scripts", "python.exe")
+        target_executable = os.path.join(os.getcwd(), VENV_DIR, "Scripts", "pythonw.exe") # Use pythonw.exe to run without a console
     else:
         target_executable = os.path.join(os.getcwd(), VENV_DIR, "bin", "python")
         
     script_to_run = os.path.join(os.getcwd(), MAIN_SCRIPT_PATH)
     
-    # Use winshell to create the shortcut
     try:
         with winshell.shortcut(shortcut_path) as shortcut:
             shortcut.path = target_executable
             shortcut.arguments = f'"{script_to_run}"'
             shortcut.working_directory = os.getcwd()
             shortcut.description = "Universal Discord Rich Presence"
-            # You can set an icon if you have one in the assets folder
             icon_path = os.path.join(os.getcwd(), "assets", "icons", "app.ico")
             if os.path.exists(icon_path):
                 shortcut.icon_location = (icon_path, 0)
@@ -107,14 +150,13 @@ def notify_completion():
         toaster.show_toast(
             "Installation Complete!",
             "Universal Discord RPC is ready. Use the desktop shortcut to start it.",
+            icon_path=os.path.join(os.getcwd(), "assets", "icons", "app.ico"),
             duration=10
         )
         print_success("Setup is complete. You can now run the application from the desktop shortcut.")
     except Exception:
-        # Fallback if notification fails
         print("\n--- Installation Complete! ---")
         print("Universal Discord RPC is ready. Use the desktop shortcut to start it.")
-
 
 def main():
     """Main function to run the installer."""
@@ -122,7 +164,7 @@ def main():
     
     check_python()
     create_virtual_environment()
-    install_dependencies()
+    install_project_dependencies()
     create_desktop_shortcut()
     notify_completion()
     
