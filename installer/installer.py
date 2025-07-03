@@ -11,14 +11,14 @@ import stat
 INSTALLER_DEPS = ['winshell', 'win10toast', 'InquirerPy', 'pyyaml', 'psutil']
 VENV_DIR = ".venv"
 REQUIREMENTS_FILE = "requirements.txt"
-CONFIG_FILE = "config.yml"
+SETTINGS_FILE = "settings.yml" # MODIFIED: Use the new settings file
 MAIN_SCRIPT_PATH = os.path.join("src", "main.py")
 SHORTCUT_NAME = "Universal Discord RPC.lnk"
 VENCORD_REPO_URL = "https://github.com/Vendicated/Vencord.git"
 VENCORD_PLUGIN_SRC = os.path.join("assets", "vencord_plugin", "index.tsx")
 VENCORD_DIR = "Vencord"
 
-# --- Helper Functions ---
+# --- Helper Functions (No changes) ---
 def print_step(message):
     """Prints a formatted step message."""
     print(f"\n{'='*10} {message} {'='*10}")
@@ -49,19 +49,19 @@ def run_command(command, cwd=None, error_msg="Command failed to execute.", inter
         else:
             # For silent or auto-enter modes
             process = subprocess.Popen(
-                command, 
-                shell=True, 
-                cwd=cwd, 
+                command,
+                shell=True,
+                cwd=cwd,
                 stdin=subprocess.PIPE if auto_enter else None,
-                stdout=subprocess.PIPE, 
+                stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
-                text=True, 
-                encoding='utf-8', 
+                text=True,
+                encoding='utf-8',
                 creationflags=subprocess.CREATE_NO_WINDOW if platform.system() == "Windows" else 0
             )
-            
+
             stdout, stderr = process.communicate(input='\n' if auto_enter else None)
-            
+
             if process.returncode != 0:
                 full_error_msg = f"{error_msg}\n      Return Code: {process.returncode}\n      STDERR: {stderr.strip()}"
                 print_error(full_error_msg, is_fatal=False)
@@ -76,7 +76,7 @@ def remove_readonly(func, path, excinfo):
     os.chmod(path, stat.S_IWRITE)
     func(path)
 
-# --- Step 0: Dependency Self-Check ---
+# --- Step 0: Dependency Self-Check (No changes) ---
 def ensure_installer_deps():
     print_step("Checking Installer Sanity")
     try:
@@ -104,7 +104,7 @@ import yaml
 import winshell
 from win10toast import ToastNotifier
 
-# --- Discord Process Management Class ---
+# --- Discord Process Management Class (No changes) ---
 class DiscordManager:
     @staticmethod
     def find_and_kill_discord():
@@ -167,9 +167,9 @@ def get_user_choice():
     print_step("User Agreement & Mode Selection")
     print("""
     Welcome! Please choose your desired mode:
-    1. External Mode (Original): Safe, but requires manual app creation on Discord's Dev Portal.
+    1. External Mode (Legacy): Safe, but requires manual app creation on Discord's Dev Portal.
     2. Integrated Mode (Recommended): Fully dynamic RPC using Vencord. Easier, but modifies your client.
-    
+
     RISK ACKNOWLEDGEMENT: Modifying the client is against Discord's ToS.
     While safe for cosmetic purposes, you proceed at your own risk.
     """)
@@ -198,39 +198,30 @@ def enable_plugin_in_settings():
 
 def install_vencord():
     print_step("Starting Vencord Installation")
-    
     use_default_path = inquirer.confirm(message="Is your Discord installed in the default location?", default=True).execute()
-
     if not os.path.exists(VENCORD_DIR):
         print_info("Cloning Vencord repository..."); run_command(f"git clone {VENCORD_REPO_URL}", error_msg="Failed to clone Vencord.")
-    
     plugin_dest_dir = os.path.join(VENCORD_DIR, "src", "userplugins", "uDRP")
     os.makedirs(plugin_dest_dir, exist_ok=True)
     shutil.copy(VENCORD_PLUGIN_SRC, os.path.join(plugin_dest_dir, "index.tsx"))
     print_success("Placed custom RPC plugin.")
-    
     print_info("Installing Vencord dependencies (this may take a while)..."); run_command("pnpm install --frozen-lockfile", cwd=VENCORD_DIR, error_msg="pnpm install failed.")
     print_info("Building Vencord..."); run_command("pnpm build", cwd=VENCORD_DIR, error_msg="pnpm build failed.")
-    
     for i in range(3, 0, -1):
         sys.stdout.write(f"\r  [i] Closing Discord in {i} second(s)..."); sys.stdout.flush(); time.sleep(1)
     print()
     DiscordManager.find_and_kill_discord()
-    
     print_info("Injecting Vencord into Discord...")
     if use_default_path:
         run_command("pnpm inject", cwd=VENCORD_DIR, error_msg="Automated injection failed. Please try again, selecting 'No' for default location.", auto_enter=True)
     else:
         print_info("Please follow the on-screen prompts to select your Discord installation path.")
         run_command("pnpm inject", cwd=VENCORD_DIR, error_msg="pnpm inject failed.", interactive=True)
-
     DiscordManager.start_discord()
     print_info("Waiting 10 seconds for Discord to initialize Vencord settings...")
     time.sleep(10)
     DiscordManager.find_and_kill_discord()
-
     enable_plugin_in_settings()
-    
     print_success("Vencord installation and configuration complete.")
     DiscordManager.start_discord()
 
@@ -252,13 +243,16 @@ def create_shortcut():
         shortcut.description, shortcut.icon_location = "Universal Discord Rich Presence", (icon_path, 0)
     print_success(f"Shortcut created on your desktop.")
 
-def update_config(mode):
+def update_settings(mode):
+    """MODIFIED: Updates the new settings.yml file."""
     print_step("Finalizing Configuration")
-    with open(CONFIG_FILE, 'r+') as f:
-        config_data = yaml.safe_load(f)
-        config_data['rpc_mode'] = mode
-        f.seek(0); yaml.dump(config_data, f, default_flow_style=False); f.truncate()
-    print_success(f"Configuration updated for '{mode}' mode.")
+    try:
+        with open(SETTINGS_FILE, 'w') as f:
+            settings_data = {'rpc_mode': mode}
+            yaml.dump(settings_data, f, default_flow_style=False)
+        print_success(f"Configuration set to '{mode}' mode in {SETTINGS_FILE}.")
+    except Exception as e:
+        print_error(f"Could not write to {SETTINGS_FILE}: {e}")
 
 def notify_completion():
     print_step("Installation Complete")
@@ -273,7 +267,7 @@ def main():
         check_prerequisites()
         install_vencord()
     setup_python_env()
-    update_config(chosen_mode)
+    update_settings(chosen_mode) # MODIFIED: Call the new settings function
     create_shortcut()
     notify_completion()
     input("\nPress Enter to close the installer.")

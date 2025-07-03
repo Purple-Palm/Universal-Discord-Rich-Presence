@@ -1,230 +1,101 @@
+# This is the main configuration file for all your applications.
+# Add new entries under the 'programs' section.
+
+# =====================================================================================
+# Default Application ID
+
+# Used for External Mode if a program doesn't have its own app_id specified.
+# Leave blank to disable.
+
 default_app_id: ''
-force_default_id: false
+
+
+# =====================================================================================
+# Program Configurations examples
+
 programs:
-  AyuGram:
-    app_id: null
-    discord_rpc:
-      large_image: 1
-      state: Messaging privately.
-    enable: false
-    executable: ayugram.exe
-    name: AyuGram Desktop
   BraveBrowser:
-    app_id: 1388726055736442942
-    discord_rpc:
-      large_image: 1
-      state: Browsing the web.
-    enable: true
-    executable: brave.exe
     name: Brave Browser
-  Clipchamp:
-    app_id: 1266991923625984064
+    executable: brave.exe
+    enable: false # Set to 'true' to enable this RPC, 'false' to disable.
+    app_id: 1388726055736442942   # 'app_id' is OPTIONAL. It is required for 'external' mode, but ignored by 'integrated' mode.
     discord_rpc:
-      large_image: 1
-      state: Editing a video.
-    enable: true
-    executable: Clipchamp.exe
-    name: Clipchamp
-  Colin's Valorant RPC:
-    custom_rpc_executable_path: python presets/valorant/VALORANT-Win64-Shipping.py
+      details: "Browsing the web"
+      state: "Looking at cool sites"
+      large_image: "brave" # Asset key for the large image
+      large_text: "Brave Browser"
+
+  Visual-Studio-Code:
+    name: "Visual Studio Code"
+    executable: "Code.exe"
     enable: false
-    executable: VALORANT-Win64-Shipping.exe
-    name: Valorant
-  Discord:
-    app_id: 1262946659701096498
+    app_id: 1388723289567789209
     discord_rpc:
-      large_image: 1
-      state: Chatting.
-    enable: true
-    executable: Discord.exe
-    name: Discord
-  Dyl's Roblox RPC:
-    app_id: 1155101158780702830
-    custom_rpc_executable_path: python src/modules/roblox.py
-    discord_rpc:
+      details: "Editing a Python file"
+      state: "Workspace: uDRP"
+      large_image: "vscode"
+      large_text: "Editing {file_name}" # Example of a future dynamic variable
+      small_image: "python"
+      small_text: "Python"
       buttons:
-      - label: Join server
-        url: roblox://experiences/start?placeId={PLACEID}&gameInstanceId={JOBID}
-      - label: View on website
-        url: https://www.roblox.com/games/{PLACEID}/
-    enable: true
-    executable: RobloxPlayerBeta.exe
-    name: Roblox
-  EpicGamesLauncher:
-    app_id: 1388827424795394239
-    discord_rpc:
-      large_image: 1
-      state: Picking a game to play.
-    enable: true
-    executable: EpicGamesLauncher.exe
-    name: Epic Games Launcher
-  FileExplorer:
-    app_id: 1388738026821259314
-    discord_rpc:
-      large_image: 1
-      state: Browsing files.
-    enable: true
-    executable: explorer.exe
-    name: File Explorer
-  GitHubDesktop:
-    app_id: 1388829761463386203
-    discord_rpc:
-      large_image: 1
-      state: Managing repositories.
-    enable: true
-    executable: GitHubDesktop.exe
-    name: GitHubDesktop
-  MicrosoftEdge:
-    app_id: 1389356353348440176
-    discord_rpc:
-      large_image: 1
-      state: Browsing the web.
-    enable: true
-    executable: msedge.exe
-    name: Edge Browser
-  NZXT_CAM:
-    app_id: 1389359521431814266
-    discord_rpc:
-      large_image: 1
-      state: Monitoring system performance.
-    enable: true
-    executable: NZXT CAM.exe
-    name: NZXT CAM
-  Photos:
-    app_id: 1389017465182486568
-    discord_rpc:
-      large_image: 1
-      state: Browsing photos.
-    enable: true
-    executable: Photos.exe
-    name: Photos
-  RiotClient:
-    app_id: 1389360664673521805
-    discord_rpc:
-      large_image: 1
-      state: Accessing Riot Games titles.
-    enable: true
-    executable: Riot Client.exe
-    name: Riot Client
-  Semebody's LoL RPC:
-    custom_rpc_executable_path: python presets/league-of-legends/lol_rpc.py
-    enable: false
-    executable: LeagueOfLegends.exe
-    name: League-of-legends
-  ShareX:
-    app_id: 1389361256141685059
-    discord_rpc:
-      large_image: 1
-      state: Capturing and sharing.
-    enable: true
-    executable: ShareX.exe
-    name: ShareX
+        - label: "View on GitHub"
+          url: "https://github.com/Purple-Palm/Universal-Discord-Rich-Presence"
+
   Spotify:
-    app_id: 1388898282457141270
-    discord_rpc:
-      large_image: 1
-      state: Choosing music to listen to.
-    enable: true
-    executable: Spotify.exe
-    name: Spotify
-  SystemSettings:
-    app_id: 1267241964353355886
-    discord_rpc:
-      large_image: 2
-      state: Changing PC settings.
+    name: "Spotify"
+    executable: "Spotify.exe"
     enable: false
-    executable: SystemSettings.exe
-    name: SystemSettings
-  Taskmgr:
-    app_id: 1388898666131226674
     discord_rpc:
-      large_image: 1
-      state: Monitoring system processes.
-    enable: true
-    executable: Taskmgr.exe
-    name: Taskmgr
-  Telegram:
-    app_id: 1389072642958430358
-    discord_rpc:
-      large_image: 1
-      state: Chatting with friends.
-    enable: true
-    executable: Telegram.exe
-    name: Telegram
-  VLCplayer:
-    app_id: 1262981573305700352
-    discord_rpc:
-      large_image: 1
-      state: Playing media.
-    enable: false
-    executable: vlc.exe
-    name: VLC Media Player
-  WindowsTerminal:
-    app_id: 1388819762896830604
-    discord_rpc:
-      large_image: 1
-      state: Using the terminal.
-    enable: true
-    executable: WindowsTerminal.exe
-    name: WindowsTerminal
-  WsaClient:
-    app_id: 1267985784644829266
-    discord_rpc:
-      large_image: 1
-      state: Using an Android app.
-    enable: false
-    executable: WsaClient.exe
-    name: WsaClient
-  cmd:
-    app_id: 1388819762896830604
-    discord_rpc:
-      large_image: 1
-      state: Using the command line.
-    enable: true
-    executable: cmd.exe
-    name: cmd
-  notepad:
-    app_id: 1388825324787208192
-    discord_rpc:
-      large_image: 1
-      state: Taking down notes.
-    enable: true
-    executable: Notepad.exe
-    name: Notepad
-  steamwebhelper:
-    app_id: 1389363389083680921
-    discord_rpc:
-      large_image: 1
-      state: Browsing the game library.
-    enable: true
-    executable: steamwebhelper.exe
-    name: steamwebhelper
-  voicemeeter8x64:
-    app_id: 1262944099531755551
-    discord_rpc:
-      large_image: 1
-      state: Configuring audio.
-    enable: false
-    executable: voicemeeter8x64.exe
-    name: voicemeeter8x64
-rpc_mode: integrated
+      presence_type: "listening"  # For 'listening' or 'streaming', set the presence_type. Defaults to 'playing'.
+      details: "Listening to my favorite artist"
+      state: "Discover Weekly"
+      large_image: "spotify_logo"
+      large_text: "Spotify"
+
+
+# =====================================================================================
+# --- TEMPLATE SECTION ---
+# Use this as a guide to create your own entries.
+# =====================================================================================
+
 template:
   TheProgram:
-    app_id: 111111111111111111
-    custom_rpc_executable_path: your\path\to\script\TheProgramRPCScript.py
-    discord_rpc:
-      buttons:
-      - label: button1
-        url: https://google.com
-      - label: button2
-        url: https://none.com
-      details: Very good program
-      large_image: large_image
-      large_text: Large Image
-      small_image: small_image
-      small_text: Small Image
-      state: Enjoying using Program
-    enable: true
-    executable: Program.exe
+    # The display name for your application.
     name: The Program
-work_dir: ''
+    # The exact executable name (case-insensitive). Find it in Task Manager.
+    executable: Program.exe
+    # Set to 'true' to enable this RPC, 'false' to disable.
+    enable: true
+    # OPTIONAL: Required for 'external' mode. Ignored by 'integrated' mode.
+    # Get this from your Discord Developer Portal application.
+    app_id: 111111111111111111
+
+    # All Rich Presence details go under this key.
+    discord_rpc:
+      # OPTIONAL: Can be 'playing' (default), 'streaming', or 'listening'.
+      presence_type: playing
+
+      # REQUIRED for 'streaming' type. The URL must be a valid Twitch or YouTube link.
+      # url: "https://www.twitch.tv/yourchannel"
+
+      # The first line of text under the application name.
+      details: "Very good program"
+      # The second line of text.
+      state: "Enjoying using Program"
+
+      # The asset key for the large image, uploaded in your Discord Dev Portal.
+      large_image: "large_image_key"
+      # The text that appears when hovering over the large image.
+      large_text: "Large Image Hover Text"
+
+      # OPTIONAL: The asset key for the small image.
+      small_image: "small_image_key"
+      # OPTIONAL: The text that appears when hovering over the small image.
+      small_text: "Small Image Hover Text"
+
+      # OPTIONAL: A list of up to two buttons.
+      buttons:
+        - label: "Button 1 Label"
+          url: "https://your-url-here.com"
+        - label: "Button 2 Label"
+          url: "https://another-url.com"

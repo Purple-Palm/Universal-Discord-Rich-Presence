@@ -1,0 +1,6 @@
+# This file controls the global settings for the application.
+#
+# rpc_mode: Determines which presence mode to use.
+# - 'integrated': Uses the Vencord plugin method. No app_id needed in config.yml.
+# - 'external': Uses the legacy method, requiring an app_id for each program.
+rpc_mode: 'integrated'
