@@ -24,9 +24,8 @@ function setRpc(activity: any) {
 
 async function checkStatus() {
     try {
-        const response = await fetch(STATUS_URL);
+        const response = await fetch(STATUS_URL, { cache: "no-store" });
         if (!response.ok) {
-            // This will happen if the python server is not running
             if (lastKnownStatus !== null) setRpc(null);
             lastKnownStatus = null;
             return;
@@ -34,15 +33,17 @@ async function checkStatus() {
 
         const content = await response.text();
 
-        // Only update if the content has actually changed
         if (content && content !== lastKnownStatus) {
-            console.log("[PythonBridge] Fetched new status. Updating presence.");
             lastKnownStatus = content;
             const activity = JSON.parse(content);
+            
+            // --- NEW: Debug Logging ---
+            // This will print the exact object to the Discord console.
+            console.log("[PythonBridge] Received payload from server:", activity);
+            
             setRpc(activity);
         }
     } catch (error) {
-        // This catches network errors when the server is down
         if (lastKnownStatus !== null) {
             console.log("[PythonBridge] Cannot connect to server. Clearing presence.");
             setRpc(null);
@@ -58,10 +59,8 @@ export default definePlugin({
 
     start() {
         console.log("[PythonBridge] Starting HTTP status poller...");
-        // Initial check
         checkStatus();
-        // Start checking the server every 5 seconds
-        statusCheckInterval = window.setInterval(checkStatus, 5000);
+        statusCheckInterval = window.setInterval(checkStatus, 1000);
     },
 
     stop() {

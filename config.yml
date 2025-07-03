@@ -1,101 +1,229 @@
+# =====================================================================================
+# FILE: config.yml (POPULATED & ASSET KEYS CORRECTED)
+# =====================================================================================
 # This is the main configuration file for all your applications.
-# Add new entries under the 'programs' section.
 
-# =====================================================================================
-# Default Application ID
+# --- Default Application ID ---
+# Create one application in the Discord Dev Portal called "Custom Status" or similar.
+# Upload all your generic image assets (for brave, notepad, etc.) to this one application.
+# Then, put its Application ID here. This is used for any program in Integrated Mode
+# that does not have its own specific 'app_id'.
+default_app_id: '111111111111111111' # Replace with your actual default App ID
 
-# Used for External Mode if a program doesn't have its own app_id specified.
-# Leave blank to disable.
-
-default_app_id: ''
-
-
-# =====================================================================================
-# Program Configurations examples
-
+# --- Program Configurations ---
 programs:
+  AyuGram:
+    name: AyuGram Desktop
+    executable: ayugram.exe
+    enable: false
+    app_id: null # Will use default_app_id in integrated mode
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Messaging privately.
   BraveBrowser:
     name: Brave Browser
     executable: brave.exe
-    enable: false # Set to 'true' to enable this RPC, 'false' to disable.
-    app_id: 1388726055736442942   # 'app_id' is OPTIONAL. It is required for 'external' mode, but ignored by 'integrated' mode.
+    enable: true
+    app_id: 1388726055736442942
     discord_rpc:
-      details: "Browsing the web"
-      state: "Looking at cool sites"
-      large_image: "brave" # Asset key for the large image
-      large_text: "Brave Browser"
-
-  Visual-Studio-Code:
-    name: "Visual Studio Code"
-    executable: "Code.exe"
-    enable: false
-    app_id: 1388723289567789209
+      details: Browsing the web
+      state: Looking at cool sites
+      large_image: 'brave-browser' 
+      large_text: Brave Browser
+  Clipchamp:
+    name: Clipchamp
+    executable: Clipchamp.exe
+    enable: true
+    app_id: 1266991923625984064
     discord_rpc:
-      details: "Editing a Python file"
-      state: "Workspace: uDRP"
-      large_image: "vscode"
-      large_text: "Editing {file_name}" # Example of a future dynamic variable
-      small_image: "python"
-      small_text: "Python"
-      buttons:
-        - label: "View on GitHub"
-          url: "https://github.com/Purple-Palm/Universal-Discord-Rich-Presence"
-
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Editing a video.
+  Discord:
+    name: Discord
+    executable: Discord.exe
+    enable: true
+    app_id: 1262946659701096498
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Chatting.
+  EpicGamesLauncher:
+    name: Epic Games Launcher
+    executable: EpicGamesLauncher.exe
+    enable: true
+    app_id: 1388827424795394239
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Picking a game to play.
+  FileExplorer:
+    name: File Explorer
+    executable: explorer.exe
+    enable: true
+    app_id: 1388738026821259314
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Browsing files.
+  GitHubDesktop:
+    name: GitHubDesktop
+    executable: GitHubDesktop.exe
+    enable: true
+    app_id: 1388829761463386203
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Managing repositories.
+  MicrosoftEdge:
+    name: Edge Browser
+    executable: msedge.exe
+    enable: true
+    app_id: 1389356353348440176
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Browsing the web.
+  NZXT_CAM:
+    name: NZXT CAM
+    executable: NZXT CAM.exe
+    enable: true
+    app_id: 1389359521431814266
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Monitoring system performance.
+  Photos:
+    name: Photos
+    executable: Photos.exe
+    enable: true
+    app_id: 1389017465182486568
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Browsing photos.
+  RiotClient:
+    name: Riot Client
+    executable: Riot Client.exe
+    enable: true
+    app_id: 1389360664673521805
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Accessing Riot Games titles.
+  ShareX:
+    name: ShareX
+    executable: ShareX.exe
+    enable: true
+    app_id: 1389361256141685059
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Capturing and sharing.
   Spotify:
-    name: "Spotify"
-    executable: "Spotify.exe"
-    enable: false
+    name: Spotify
+    executable: Spotify.exe
+    enable: true
+    app_id: 1388898282457141270
     discord_rpc:
-      presence_type: "listening"  # For 'listening' or 'streaming', set the presence_type. Defaults to 'playing'.
-      details: "Listening to my favorite artist"
-      state: "Discover Weekly"
-      large_image: "spotify_logo"
-      large_text: "Spotify"
-
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Choosing music to listen to.
+  SystemSettings:
+    name: SystemSettings
+    executable: SystemSettings.exe
+    enable: false
+    app_id: 1267241964353355886
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Changing PC settings.
+  Taskmgr:
+    name: Taskmgr
+    executable: Taskmgr.exe
+    enable: true
+    app_id: 1388898666131226674
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Monitoring system processes.
+  Telegram:
+    name: Telegram
+    executable: Telegram.exe
+    enable: true
+    app_id: 1389072642958430358
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Chatting with friends.
+  VLCplayer:
+    name: VLC Media Player
+    executable: vlc.exe
+    enable: false
+    app_id: 1262981573305700352
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Playing media.
+  WindowsTerminal:
+    name: WindowsTerminal
+    executable: WindowsTerminal.exe
+    enable: true
+    app_id: 1388819762896830604
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Using the terminal.
+  WsaClient:
+    name: WsaClient
+    executable: WsaClient.exe
+    enable: false
+    app_id: 1267985784644829266
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Using an Android app.
+  cmd:
+    name: cmd
+    executable: cmd.exe
+    enable: true
+    app_id: 1388819762896830604
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Using the command line.
+  notepad:
+    name: Notepad
+    executable: Notepad.exe
+    enable: true
+    app_id: 1388825324787208192
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Taking down notes.
+  steamwebhelper:
+    name: steamwebhelper
+    executable: steamwebhelper.exe
+    enable: true
+    app_id: 1389363389083680921
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Browsing the game library.
+  voicemeeter8x64:
+    name: voicemeeter8x64
+    executable: voicemeeter8x64.exe
+    enable: false
+    app_id: 1262944099531755551
+    discord_rpc:
+      large_image: '1' # CORRECTED: Asset key set to '1'
+      state: Configuring audio.
 
 # =====================================================================================
 # --- TEMPLATE SECTION ---
-# Use this as a guide to create your own entries.
 # =====================================================================================
-
 template:
   TheProgram:
-    # The display name for your application.
     name: The Program
-    # The exact executable name (case-insensitive). Find it in Task Manager.
     executable: Program.exe
-    # Set to 'true' to enable this RPC, 'false' to disable.
     enable: true
-    # OPTIONAL: Required for 'external' mode. Ignored by 'integrated' mode.
-    # Get this from your Discord Developer Portal application.
-    app_id: 111111111111111111
+    app_id: 123456789012345678 # Optional, overrides the default_app_id.
 
-    # All Rich Presence details go under this key.
     discord_rpc:
-      # OPTIONAL: Can be 'playing' (default), 'streaming', or 'listening'.
       presence_type: playing
-
-      # REQUIRED for 'streaming' type. The URL must be a valid Twitch or YouTube link.
-      # url: "https://www.twitch.tv/yourchannel"
-
-      # The first line of text under the application name.
       details: "Very good program"
-      # The second line of text.
       state: "Enjoying using Program"
-
-      # The asset key for the large image, uploaded in your Discord Dev Portal.
       large_image: "large_image_key"
-      # The text that appears when hovering over the large image.
-      large_text: "Large Image Hover Text"
+      
+      timestamps:
+        # Option 1: No Timer (Default Behavior)
+        # To show no timer, simply omit the 'timestamps' section or leave it empty.
 
-      # OPTIONAL: The asset key for the small image.
-      small_image: "small_image_key"
-      # OPTIONAL: The text that appears when hovering over the small image.
-      small_text: "Small Image Hover Text"
+        # Option 2: Elapsed Time
+        # Shows "00:01 elapsed" and counts up.
+        # elapsed: true
 
-      # OPTIONAL: A list of up to two buttons.
-      buttons:
-        - label: "Button 1 Label"
-          url: "https://your-url-here.com"
-        - label: "Button 2 Label"
-          url: "https://another-url.com"
+        # Option 3: Countdown Timer
+        # Shows "01:30 remaining" and counts down.
+        # Use a Unix timestamp converter to get the number for a future time.
+        # end: 1751552400
