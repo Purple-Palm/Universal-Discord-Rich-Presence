@@ -1,203 +1,149 @@
-# =====================================================================================
-# FILE: config.yml (POPULATED & ASSET KEYS CORRECTED)
-# =====================================================================================
-# This is the main configuration file for all your applications.
-
 # --- Default Application ID ---
-# Create one application in the Discord Dev Portal called "Custom Status" or similar.
-# Upload all your generic image assets (for brave, notepad, etc.) to this one application.
-# Then, put its Application ID here. This is used for any program in Integrated Mode
-# that does not have its own specific 'app_id'.
-default_app_id: '111111111111111111' # Replace with your actual default App ID
+# Used for any program that does not have a specific 'app_id' assigned.
+# Create one application in the Discord Dev Portal, upload all your assets to it,
+# and paste its ID here.
+default_app_id: '1388723289567789209' # Replace with your actual default App ID
 
+# =====================================================================================
 # --- Program Configurations ---
+# A consolidated, alphabetized list of all applications.
+# =====================================================================================
 programs:
-  AyuGram:
-    name: AyuGram Desktop
-    executable: ayugram.exe
-    enable: false
-    app_id: null # Will use default_app_id in integrated mode
-    discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Messaging privately.
   BraveBrowser:
     name: Brave Browser
     executable: brave.exe
     enable: true
-    app_id: 1388726055736442942
     discord_rpc:
       details: Browsing the web
-      state: Looking at cool sites
-      large_image: 'brave-browser' 
-      large_text: Brave Browser
-  Clipchamp:
-    name: Clipchamp
-    executable: Clipchamp.exe
+      large_image: 'brave-browser'
+  CheatEngine:
+    name: Cheat Engine
+    executable: cheatengine-x86_64-SSE4-AVX2.exe
     enable: true
-    app_id: 1266991923625984064
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Editing a video.
-  Discord:
-    name: Discord
-    executable: Discord.exe
+      details: "Looking for values"
+      large_image: 'cheat-engine'
+  Chrome:
+    name: Google Chrome
+    executable: chrome.exe
     enable: true
-    app_id: 1262946659701096498
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Chatting.
-  EpicGamesLauncher:
-    name: Epic Games Launcher
-    executable: EpicGamesLauncher.exe
-    enable: true
-    app_id: 1388827424795394239
-    discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Picking a game to play.
+      details: Browsing the web
+      large_image: 'google-chrome'
   FileExplorer:
     name: File Explorer
     executable: explorer.exe
     enable: true
-    app_id: 1388738026821259314
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Browsing files.
+      details: Browsing files
+      large_image: 'explorer'
+  FileZilla:
+    name: FileZilla
+    executable: filezilla.exe
+    enable: true
+    discord_rpc:
+      details: Managing FTP connections
+      large_image: 'filezilla'
+  Firefox:
+    name: Firefox
+    executable: firefox.exe
+    enable: true
+    discord_rpc:
+      details: Browsing the web
+      large_image: 'firefox'
   GitHubDesktop:
-    name: GitHubDesktop
+    name: GitHub Desktop
     executable: GitHubDesktop.exe
     enable: true
-    app_id: 1388829761463386203
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Managing repositories.
+      details: Managing repositories
+      large_image: 'github'
   MicrosoftEdge:
-    name: Edge Browser
+    name: Microsoft Edge
     executable: msedge.exe
     enable: true
-    app_id: 1389356353348440176
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Browsing the web.
-  NZXT_CAM:
-    name: NZXT CAM
-    executable: NZXT CAM.exe
+      details: Browsing the web
+      large_image: 'microsoft-edge'
+  MSI-Afterburner:
+    name: MSI Afterburner
+    executable: MSIAfterburner.exe
     enable: true
-    app_id: 1389359521431814266
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Monitoring system performance.
-  Photos:
-    name: Photos
-    executable: Photos.exe
+      details: Monitoring hardware
+      large_image: 'msiafterburner'
+  Notepad:
+    name: Notepad
+    executable: Notepad.exe
     enable: true
-    app_id: 1389017465182486568
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Browsing photos.
-  RiotClient:
-    name: Riot Client
-    executable: Riot Client.exe
+      details: Taking notes
+      large_image: 'notepad'
+  Postman:
+    name: Postman
+    executable: Postman.exe
     enable: true
-    app_id: 1389360664673521805
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Accessing Riot Games titles.
+      details: Testing APIs
+      large_image: 'postman'
   ShareX:
     name: ShareX
     executable: ShareX.exe
     enable: true
-    app_id: 1389361256141685059
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Capturing and sharing.
+      details: Capturing and sharing
+      large_image: 'sharex'
   Spotify:
     name: Spotify
     executable: Spotify.exe
     enable: true
-    app_id: 1388898282457141270
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Choosing music to listen to.
-  SystemSettings:
-    name: SystemSettings
-    executable: SystemSettings.exe
-    enable: false
-    app_id: 1267241964353355886
+      presence_type: listening
+      details: Listening to music
+      large_image: 'spotify'
+  SublimeText:
+    name: Sublime Text
+    executable: sublime_text.exe
+    enable: true
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Changing PC settings.
+      details: Editing text and code
+      large_image: 'sublime-text'
   Taskmgr:
-    name: Taskmgr
+    name: Task Manager
     executable: Taskmgr.exe
     enable: true
-    app_id: 1388898666131226674
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Monitoring system processes.
+      details: Monitoring system processes
+      large_image: 'task-manager'
   Telegram:
     name: Telegram
     executable: Telegram.exe
     enable: true
-    app_id: 1389072642958430358
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Chatting with friends.
-  VLCplayer:
+      details: Chatting with friends
+      large_image: 'telegram'
+  VLC:
     name: VLC Media Player
     executable: vlc.exe
-    enable: false
-    app_id: 1262981573305700352
+    enable: true
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Playing media.
+      details: Watching a video
+      large_image: 'vlc'
+  VisualStudioCode:
+    name: Visual Studio Code
+    executable: Code.exe
+    enable: false # VSCode has its own RPC.
+    discord_rpc:
+      details: Editing code
+      state: In a workspace
+      large_image: 'vscode_icon'
   WindowsTerminal:
-    name: WindowsTerminal
+    name: Windows Terminal
     executable: WindowsTerminal.exe
     enable: true
-    app_id: 1388819762896830604
     discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Using the terminal.
-  WsaClient:
-    name: WsaClient
-    executable: WsaClient.exe
-    enable: false
-    app_id: 1267985784644829266
-    discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Using an Android app.
-  cmd:
-    name: cmd
-    executable: cmd.exe
-    enable: true
-    app_id: 1388819762896830604
-    discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Using the command line.
-  notepad:
-    name: Notepad
-    executable: Notepad.exe
-    enable: true
-    app_id: 1388825324787208192
-    discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Taking down notes.
-  steamwebhelper:
-    name: steamwebhelper
-    executable: steamwebhelper.exe
-    enable: true
-    app_id: 1389363389083680921
-    discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Browsing the game library.
-  voicemeeter8x64:
-    name: voicemeeter8x64
-    executable: voicemeeter8x64.exe
-    enable: false
-    app_id: 1262944099531755551
-    discord_rpc:
-      large_image: '1' # CORRECTED: Asset key set to '1'
-      state: Configuring audio.
+      details: Using the command line
+      large_image: 'terminal'
 
 # =====================================================================================
 # --- TEMPLATE SECTION ---
@@ -221,7 +167,7 @@ template:
 
         # Option 2: Elapsed Time
         # Shows "00:01 elapsed" and counts up.
-        # elapsed: true
+        elapsed: true
 
         # Option 3: Countdown Timer
         # Shows "01:30 remaining" and counts down.
