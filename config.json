@@ -1,7 +1,7 @@
 {
   "core": {
     "client_id": "123456789012345678",
-    "github_repo_url": "https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/tree/Recovery-and-Reorganization/assets/icons",
+    "github_repo_url": "https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/tree/full-rework/assets/icons",
     "poll_interval": 2.5,
     "log_level": "INFO"
   },
