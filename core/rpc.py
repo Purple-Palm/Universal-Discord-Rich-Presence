@@ -1,0 +1,1 @@
+# Handles connection to the discord
