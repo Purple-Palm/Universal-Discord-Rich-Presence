@@ -1,0 +1,1 @@
+# Hyprland/Sway/KDE specific calls

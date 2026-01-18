@@ -2,5 +2,7 @@
 
 # Universal Discord Rich Presence REWORKED
 
-coming soon...
-
+Coming up
+- Linux + Windows Support
+- Optimization
+- Single Discord application support 

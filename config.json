@@ -1,0 +1,41 @@
+{
+  "core": {
+    "client_id": "123456789012345678",
+    "github_repo_url": "https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/tree/Recovery-and-Reorganization/assets/icons",
+    "poll_interval": 2.5,
+    "log_level": "INFO"
+  },
+
+  "activity_defaults": {
+    "details": "Idling",
+    "state": "On Desktop",
+    "large_image": "desktop_icon.png",
+    "large_text": "My Universal PC"
+  },
+
+  "examples": [
+    {
+      "process_names": ["brave", "brave.exe"],
+      "display_name": "Brave Browser",
+      "icon": "Brave-Browser.png",
+      "type": 0,
+      "description_strategy": "window_title",
+      "buttons": [{"label": "Download Brave", "url": "https://brave.com"}]
+    },
+    {
+      "process_names": ["steam"],
+      "display_name": "Steam",
+      "icon": "Steam.png",
+      "type": 0,
+      "state": "Browsing Store"
+    },
+    {
+      "process_names": ["code", "cursor"],
+      "display_name": "Coding",
+      "icon": "Sublime-Text.png",
+      "type": 0,
+      "details": "Writing Code",
+      "show_timestamp": true
+    }
+  ]
+}
