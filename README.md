@@ -6,3 +6,9 @@ Coming up
 - Linux + Windows Support
 - Optimization
 - Single Discord application support 
+
+
+
+## Dependencies
+
+* Arch Linux KDE Wayland: 'kdotool' (yay -S kdotool).
