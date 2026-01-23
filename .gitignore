@@ -241,5 +241,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-all_project_files.txt
+archive/all_project_filesV3.txt
+
+archive/
 

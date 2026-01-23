@@ -1,40 +1,258 @@
 {
   "core": {
-    "client_id": "123456789012345678",
-    "github_repo_url": "https://github.com/Purple-Palm/Universal-Discord-Rich-Presence/tree/full-rework/assets/icons",
+    "client_id": "1463748310706946252",
     "poll_interval": 2.5,
     "log_level": "INFO"
   },
-
-  "activity_defaults": {
-    "details": "Idling",
-    "state": "On Desktop",
-    "large_image": "desktop_icon.png",
-    "large_text": "My Universal PC"
-  },
-
-  "examples": [
+  "rules": [
     {
+      "comment": "--- BROWSERS ---",
+      "enabled": true,
       "process_names": ["brave", "brave.exe"],
       "display_name": "Brave Browser",
-      "icon": "Brave-Browser.png",
-      "type": 0,
-      "description_strategy": "window_title",
-      "buttons": [{"label": "Download Brave", "url": "https://brave.com"}]
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Brave-Browser.png",
+      "large_text": "Brave",
+      "details": "{title}",
+      "show_timestamp": true
     },
     {
-      "process_names": ["steam"],
+      "comment": "Google Chrome",
+      "enabled": true,
+      "process_names": ["chrome", "chrome.exe", "google-chrome-stable"],
+      "display_name": "Google Chrome",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Google-Chrome.png",
+      "large_text": "Chrome",
+      "details": "{title}",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Mozilla Firefox",
+      "enabled": true,
+      "process_names": ["firefox", "firefox.exe"],
+      "display_name": "Firefox",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/FireFox.png",
+      "large_text": "Firefox",
+      "details": "{title}",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Microsoft Edge",
+      "enabled": true,
+      "process_names": ["msedge", "msedge.exe"],
+      "display_name": "Microsoft Edge",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Microsoft-Edge.png",
+      "large_text": "Edge",
+      "details": "{title}",
+      "show_timestamp": true
+    },
+
+    {
+      "comment": "--- DEVELOPMENT TOOLS ---",
+      "enabled": true,
+      "process_names": ["code", "code.exe", "visual-studio-code"],
+      "display_name": "Visual Studio Code",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/vscode.png",
+      "large_text": "Editing Code",
+      "small_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/python.png",
+      "small_text": "Python",
+      "details": "Editing {title}",
+      "show_timestamp": true,
+      "buttons": [
+        {"label": "View Repo", "url": "https://github.com/Purple-Palm/Universal-Discord-Rich-Presence"},
+        {"label": "Ask Me", "url": "https://discord.gg/dzqeXYDDmy"}
+      ]
+    },
+    {
+      "comment": "Sublime Text",
+      "enabled": true,
+      "process_names": ["sublime_text", "sublime_text.exe"],
+      "display_name": "Sublime Text",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Sublime-Text.png",
+      "large_text": "Sublime Text",
+      "details": "Editing {title}",
+      "show_timestamp": true
+    },
+    {
+      "comment": "GitHub Desktop",
+      "enabled": true,
+      "process_names": ["githubdesktop", "githubdesktop.exe"],
+      "display_name": "GitHub Desktop",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/GitHub.png",
+      "large_text": "GitHub",
+      "details": "Managing Repositories",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Postman",
+      "enabled": true,
+      "process_names": ["postman", "postman.exe"],
+      "display_name": "Postman",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Postman.png",
+      "large_text": "API Testing",
+      "details": "Testing APIs",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Terminal / Console",
+      "enabled": true,
+      "process_names": ["windowsterminal", "wt.exe", "powershell", "cmd.exe", "konsole", "gnome-terminal"],
+      "display_name": "Terminal",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Terminal.png",
+      "large_text": "Terminal",
+      "details": "Running Commands",
+      "show_timestamp": true
+    },
+
+    {
+      "comment": "--- MEDIA & ENTERTAINMENT ---",
+      "enabled": true,
+      "process_names": ["spotify", "spotify.exe"],
+      "display_name": "Spotify",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Spotify.png",
+      "large_text": "Music",
+      "details": "Listening to Music",
+      "show_timestamp": false
+    },
+    {
+      "comment": "VLC Media Player",
+      "enabled": true,
+      "process_names": ["vlc", "vlc.exe"],
+      "display_name": "VLC Media Player",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/VLC.png",
+      "large_text": "VLC",
+      "details": "Watching {title}",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Photos App",
+      "enabled": true,
+      "process_names": ["microsoft.photos.exe", "photos.exe"],
+      "display_name": "Photos",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Photos.png",
+      "large_text": "Viewing Photos",
+      "details": "Viewing Image Gallery",
+      "show_timestamp": true
+    },
+
+    {
+      "comment": "--- GAMING & LAUNCHERS ---",
+      "enabled": true,
+      "process_names": ["steam", "steam.exe"],
       "display_name": "Steam",
-      "icon": "Steam.png",
-      "type": 0,
-      "state": "Browsing Store"
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Steam.png",
+      "large_text": "Steam",
+      "details": "Browsing Library",
+      "show_timestamp": true
     },
     {
-      "process_names": ["code", "cursor"],
-      "display_name": "Coding",
-      "icon": "Sublime-Text.png",
-      "type": 0,
-      "details": "Writing Code",
+      "comment": "Epic Games Launcher",
+      "enabled": true,
+      "process_names": ["epicgameslauncher", "epicgameslauncher.exe"],
+      "display_name": "Epic Games",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Epic-Games.png",
+      "large_text": "Epic Games",
+      "details": "Browsing Store",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Riot Client",
+      "enabled": true,
+      "process_names": ["riotclientservices", "riotclientservices.exe"],
+      "display_name": "Riot Client",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Riot-Client.png",
+      "large_text": "Riot Games",
+      "details": "Launching Game",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Cheat Engine",
+      "enabled": true,
+      "process_names": ["cheat engine.exe", "cheatengine-x86_64.exe", "cheatengine-i386.exe"],
+      "display_name": "Cheat Engine",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Cheat-Engine.png",
+      "large_text": "Hacking",
+      "details": "Modifying Memory",
+      "show_timestamp": true
+    },
+
+    {
+      "comment": "--- SYSTEM & UTILITIES ---",
+      "enabled": true,
+      "process_names": ["explorer", "explorer.exe", "dolphin"],
+      "display_name": "File Explorer",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Explorer.png",
+      "large_text": "Explorer",
+      "details": "Browsing Files",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Task Manager",
+      "enabled": true,
+      "process_names": ["taskmgr", "taskmgr.exe"],
+      "display_name": "Task Manager",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Task-Manager.png",
+      "large_text": "Task Manager",
+      "details": "Monitoring System",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Notepad",
+      "enabled": true,
+      "process_names": ["notepad", "notepad.exe"],
+      "display_name": "Notepad",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Notepad.png",
+      "large_text": "Notepad",
+      "details": "Editing {title}",
+      "show_timestamp": true
+    },
+    {
+      "comment": "FileZilla",
+      "enabled": true,
+      "process_names": ["filezilla", "filezilla.exe"],
+      "display_name": "FileZilla",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/FileZilla.png",
+      "large_text": "FTP Client",
+      "details": "Transferring Files",
+      "show_timestamp": true
+    },
+    {
+      "comment": "ShareX",
+      "enabled": true,
+      "process_names": ["sharex", "sharex.exe"],
+      "display_name": "ShareX",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/ShareX.png",
+      "large_text": "ShareX",
+      "details": "Capturing Screen",
+      "show_timestamp": true
+    },
+    {
+      "comment": "MSI Afterburner",
+      "enabled": true,
+      "process_names": ["msiafterburner", "msiafterburner.exe"],
+      "display_name": "Afterburner",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/MSIAfterburner.png",
+      "large_text": "Overclocking",
+      "details": "Tuning GPU",
+      "show_timestamp": true
+    },
+    {
+      "comment": "NZXT CAM",
+      "enabled": true,
+      "process_names": ["nzxt cam", "nzxt cam.exe"],
+      "display_name": "NZXT CAM",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Nzxt-Cam.png",
+      "large_text": "PC Monitoring",
+      "details": "Checking Temps",
+      "show_timestamp": true
+    },
+    {
+      "comment": "Telegram Desktop",
+      "enabled": true,
+      "process_names": ["telegram", "telegram.exe"],
+      "display_name": "Telegram",
+      "large_image": "https://raw.githubusercontent.com/Purple-Palm/Universal-Discord-Rich-Presence/full-rework/assets/icons/Telegram.png",
+      "large_text": "Chatting",
+      "details": "Chatting",
       "show_timestamp": true
     }
   ]
